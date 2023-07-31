@@ -8,6 +8,7 @@ import "./styles/responsive.css";
 const App = () => {
   const items = data.items;
   const itemsPerPage = 5;
+  const totalPages = Math.ceil(items.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
 
   const setCurrentItems = () => {
@@ -18,16 +19,11 @@ const App = () => {
   };
 
   const handlePage = (direction) => {
-    const totalPages = Math.ceil(items.length / itemsPerPage);
-    console.log("total pages", totalPages);
-
     if (direction === "back" && currentPage > 1) {
       setCurrentPage(currentPage - 1);
-      console.log("case 1");
     }
     if (direction === "next" && totalPages > currentPage) {
       setCurrentPage(currentPage + 1);
-      console.log("case 2");
     }
   };
 
@@ -56,9 +52,13 @@ const App = () => {
             )
           )}
         </table>
-        <button onClick={() => handlePage("back")}>-</button>
+        {currentPage !== 1 && (
+          <button onClick={() => handlePage("back")}>-</button>
+        )}
         <h2>{currentPage}</h2>
-        <button onClick={() => handlePage("next")}>+</button>
+        {currentPage !== totalPages && (
+          <button onClick={() => handlePage("next")}>+</button>
+        )}
       </main>
     </div>
   );
