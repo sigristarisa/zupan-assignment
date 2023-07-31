@@ -1,15 +1,18 @@
 import { useState } from "react";
 import data from "./data.json";
 import { formatDate, formatId, formatPrice } from "./helpers/formatters.js";
+import { sortStrings, sortNumbers, sortDates } from "./helpers/sorters.js";
 import "./styles/reset.css";
 import "./styles/style.css";
 import "./styles/responsive.css";
 
 const App = () => {
-  const items = data.items;
+  const [items, setItems] = useState(data.items);
   const itemsPerPage = 5;
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
+  const sortingStates = ["none", "descendent", "ascendent"];
+  let sortIndex = 0;
 
   const setCurrentItems = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -26,6 +29,16 @@ const App = () => {
       setCurrentPage(currentPage + 1);
     }
   };
+
+  // const setSortingState = () => {
+  //   // console.log("hi no.1");
+  //   sortingStates.length - 1 > sortIndex ? sortIndex++ : (sortIndex = 0);
+  //   // console.log("hi no.2");
+  //   console.log("sortingState", sortingStates[sortIndex]);
+  //   setItems(sortDates(items, "countedAt", sortingStates[sortIndex]));
+  //   // console.log("hi no.3");
+  //   console.log(items);
+  // };
 
   return (
     <div className='App'>
