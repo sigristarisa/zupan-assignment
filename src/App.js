@@ -44,46 +44,49 @@ const App = () => {
   return (
     <div className='App'>
       <main>
-        <table>
-          <tr className='twelve-grid-columns table-header'>
-            <th className='grid-column_two'>COUNTED AT</th>
-            <th className='grid-column_one table-header_num'>ID</th>
-            <th className='grid-column_four'>PRODUCT</th>
-            <th className='grid-column_one table-header_num'>AMOUNT</th>
-            <th className='grid-column_two table-header_num'>PRICE/UNIT</th>
-            <th className='grid-column_two'>USER</th>
-          </tr>
-          {setCurrentItems().map(
-            ({ id, countedAt, product, quantity, price, user }) => (
-              <tr key={id} className='twelve-grid-columns table-row'>
-                <td className='grid-column_two table-row_date'>
-                  {formatDate(countedAt)}
-                </td>
-                <td className='grid-column_one table-row_num'>
-                  {formatId(id)}
-                </td>
-                <td className='grid-column_four table-row_product'>
-                  {product}
-                </td>
-                <td className='grid-column_one table-row_num'>{quantity}</td>
-                <td className='grid-column_two table-row_num'>
-                  {formatPrice(price)}
-                </td>
-                <td className='grid-column_two table-row_user'>
-                  <a href='http://localhost:3000/'>{user}</a>
-                </td>
-              </tr>
-            )
+        <div className='wrapper'>
+          <table>
+            <tr className='twelve-grid-columns table-header'>
+              <th className='grid-column_two'>COUNTED AT</th>
+              <th className='grid-column_one table-header_num'>ID</th>
+              <th className='grid-column_four'>PRODUCT</th>
+              <th className='grid-column_one table-header_num'>AMOUNT</th>
+              <th className='grid-column_two table-header_num'>PRICE/UNIT</th>
+              <th className='grid-column_two'>USER</th>
+            </tr>
+            {setCurrentItems().map(
+              ({ id, countedAt, product, quantity, price, user }) => (
+                <tr key={id} className='twelve-grid-columns table-row'>
+                  <td className='grid-column_two table-row_date'>
+                    {formatDate(countedAt)}
+                  </td>
+                  <td className='grid-column_one table-row_num'>
+                    {formatId(id)}
+                  </td>
+                  <td className='grid-column_four table-row_product'>
+                    {product}
+                  </td>
+                  <td className='grid-column_one table-row_num'>{quantity}</td>
+                  <td className='grid-column_two table-row_num'>
+                    {formatPrice(price)}
+                  </td>
+                  <td className='grid-column_two table-row_user'>
+                    <a href='http://localhost:3000/'>{user}</a>
+                  </td>
+                </tr>
+              )
+            )}
+          </table>
+        </div>
+        <div>
+          {currentPage !== 1 && (
+            <button onClick={() => handlePage("back")}>-</button>
           )}
-        </table>
-
-        {currentPage !== 1 && (
-          <button onClick={() => handlePage("back")}>-</button>
-        )}
-        <h2>{currentPage}</h2>
-        {currentPage !== totalPages && (
-          <button onClick={() => handlePage("next")}>+</button>
-        )}
+          <h2>{currentPage}</h2>
+          {currentPage !== totalPages && (
+            <button onClick={() => handlePage("next")}>+</button>
+          )}
+        </div>
       </main>
     </div>
   );
