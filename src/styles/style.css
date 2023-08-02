@@ -13,19 +13,23 @@ html {
 
 main {
   width: 90vw;
+  height: 80vh;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
-}
-
-table {
-  width: 100%;
-  color: var(--off-black);
+  border: solid green 1px;
 }
 
 .container__table {
   width: 100%;
+  height: 90%;
   overflow: scroll;
+  /* border: solid yellow 1px; */
+}
+
+table {
+  color: var(--off-black);
 }
 
 .table-header {
@@ -42,7 +46,7 @@ th {
 }
 
 .table-row {
-  height: 60px;
+  height: calc((80vh * 0.8 - 32px) / 5);
   border-bottom: solid var(--grey) 1px;
   display: grid;
   align-items: center;
@@ -73,6 +77,8 @@ th {
 
 .container__page-btn {
   width: 8vw;
+  height: 10%;
+  /* border: red solid 1px; */
   display: flex;
   justify-content: space-around;
   align-items: center;

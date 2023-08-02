@@ -6,9 +6,9 @@
 
 @media screen and (max-width: 768px) {
   html {
-    --small-space: 1vw;
-    --space: 2vw;
-    --large-space: 5vw;
+    --space-xs: 2vw;
+    --space-s: 4.5vw;
+    --space-m: 5vw;
   }
 
   table {
