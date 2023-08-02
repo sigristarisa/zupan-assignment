@@ -28,7 +28,7 @@ main {
   /* border: solid yellow 1px; */
 }
 
-table {
+tbody {
   color: var(--off-black);
 }
 

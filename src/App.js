@@ -8,12 +8,13 @@ import "./styles/layout.css";
 import "./styles/responsive.css";
 
 const App = () => {
-  const [items, setItems] = useState(data.items);
+  const initialItems = data.items;
+  const [items, setItems] = useState(initialItems);
   const itemsPerPage = 5;
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
-  const sortingStates = ["none", "descendent", "ascendent"];
-  let sortIndex = 0;
+  const sortStatus = ["none", "descendent", "ascendent"];
+  const [sortIndex, setSortIndex] = useState(0);
 
   const setCurrentItems = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -30,24 +31,23 @@ const App = () => {
       setCurrentPage(currentPage + 1);
     }
   };
-
-  // const setSortingState = () => {
-  //   // console.log("hi no.1");
-  //   sortingStates.length - 1 > sortIndex ? sortIndex++ : (sortIndex = 0);
-  //   // console.log("hi no.2");
-  //   console.log("sortingState", sortingStates[sortIndex]);
-  //   setItems(sortDates(items, "countedAt", sortingStates[sortIndex]));
-  //   // console.log("hi no.3");
-  //   console.log(items);
-  // };
+  const handleSortStatus = (header) => {
+    setSortIndex((sortIndex + 1) % sortStatus.length);
+    setItems(sortDates(initialItems, header, sortStatus[sortIndex]));
+  };
 
   return (
     <div className='App'>
       <main>
-        <div className='container__table'>
-          <table>
+        <table className='container__table'>
+          <tbody>
             <tr className='twelve-grid-columns table-header'>
-              <th className='grid-column_two'>COUNTED AT</th>
+              <th
+                className='grid-column_two'
+                onClick={() => handleSortStatus("countedAt")}
+              >
+                COUNTED AT
+              </th>
               <th className='grid-column_one table-header_num'>ID</th>
               <th className='grid-column_four'>PRODUCT</th>
               <th className='grid-column_one table-header_num'>AMOUNT</th>
@@ -76,8 +76,8 @@ const App = () => {
                 </tr>
               )
             )}
-          </table>
-        </div>
+          </tbody>
+        </table>
         <div className='container__page-btn'>
           {currentPage === 1 ? (
             <span className='space__btn'></span>
@@ -92,10 +92,7 @@ const App = () => {
                 y='0px'
               >
                 <g>
-                  <path
-                    class='fil0'
-                    d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z'
-                  />
+                  <path d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z' />
                 </g>
               </svg>
             </button>
@@ -113,10 +110,7 @@ const App = () => {
                 y='0px'
               >
                 <g>
-                  <path
-                    class='fil0'
-                    d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z'
-                  />
+                  <path d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z' />
                 </g>
               </svg>
             </button>
