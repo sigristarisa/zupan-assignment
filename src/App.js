@@ -4,8 +4,8 @@ import { formatDate, formatId, formatPrice } from "./helpers/formatters.js";
 import { sortStrings, sortNumbers, sortDates } from "./helpers/sorters.js";
 import "./styles/reset.css";
 import "./styles/style.css";
-import "./styles/responsive.css";
 import "./styles/layout.css";
+import "./styles/responsive.css";
 
 const App = () => {
   const [items, setItems] = useState(data.items);
@@ -48,9 +48,9 @@ const App = () => {
           <tr className='twelve-grid-columns table-header'>
             <th className='grid-column_two'>COUNTED AT</th>
             <th className='grid-column_one table-header_num'>ID</th>
-            <th className='grid-column_five'>PRODUCT</th>
+            <th className='grid-column_four'>PRODUCT</th>
             <th className='grid-column_one table-header_num'>AMOUNT</th>
-            <th className='grid-column_one table-header_num'>PRICE/UNIT</th>
+            <th className='grid-column_two table-header_num'>PRICE/UNIT</th>
             <th className='grid-column_two'>USER</th>
           </tr>
           {setCurrentItems().map(
@@ -62,11 +62,11 @@ const App = () => {
                 <td className='grid-column_one table-row_num'>
                   {formatId(id)}
                 </td>
-                <td className='grid-column_five table-row_product'>
+                <td className='grid-column_four table-row_product'>
                   {product}
                 </td>
                 <td className='grid-column_one table-row_num'>{quantity}</td>
-                <td className='grid-column_one table-row_num'>
+                <td className='grid-column_two table-row_num'>
                   {formatPrice(price)}
                 </td>
                 <td className='grid-column_two table-row_user'>
@@ -76,6 +76,7 @@ const App = () => {
             )
           )}
         </table>
+
         {currentPage !== 1 && (
           <button onClick={() => handlePage("back")}>-</button>
         )}

@@ -1,8 +1,8 @@
 /* --- SPACING --- */
 html {
-  --space-s: 1vw;
-  --space-m: 2vw;
-  --space-l: 5vw;
+  --space-s: 2vw;
+  --space-m: 4.5vw;
+  --space-l: 10vw;
 }
 
 .twelve-grid-columns {
@@ -19,6 +19,6 @@ html {
   grid-column: auto/span 2;
 }
 
-.grid-column_five {
-  grid-column: auto/span 5;
+.grid-column_four {
+  grid-column: auto/span 4;
 }

@@ -13,6 +13,7 @@ html {
 
 main {
   width: 90vw;
+  height: auto;
   border: solid green 1px;
   overflow: scroll;
 }
@@ -27,7 +28,6 @@ table {
   margin-bottom: 40px;
   font-size: 0.8em;
   border-bottom: solid var(--off-black) 1px;
-  display: grid;
   align-items: center;
   text-align: left;
 }
@@ -62,5 +62,6 @@ th {
 
 .table-row_user a {
   color: var(--blue);
+  font-size: 0.9em;
   font-style: italic;
 }

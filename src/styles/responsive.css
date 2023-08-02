@@ -1,2 +1,17 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+  main {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    --small-space: 1vw;
+    --space: 2vw;
+    --large-space: 5vw;
+  }
+
+  table {
+    width: 200vw;
+  }
 }
