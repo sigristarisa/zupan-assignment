@@ -44,7 +44,7 @@ const App = () => {
   return (
     <div className='App'>
       <main>
-        <div className='wrapper'>
+        <div className='container__table'>
           <table>
             <tr className='twelve-grid-columns table-header'>
               <th className='grid-column_two'>COUNTED AT</th>
@@ -78,13 +78,48 @@ const App = () => {
             )}
           </table>
         </div>
-        <div>
-          {currentPage !== 1 && (
-            <button onClick={() => handlePage("back")}>-</button>
+        <div className='container__page-btn'>
+          {currentPage === 1 ? (
+            <span className='space__btn'></span>
+          ) : (
+            <button onClick={() => handlePage("back")}>
+              {" "}
+              <svg
+                className='btn__arrow-back'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 847 1058.75'
+                x='0px'
+                y='0px'
+              >
+                <g>
+                  <path
+                    class='fil0'
+                    d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z'
+                  />
+                </g>
+              </svg>
+            </button>
           )}
-          <h2>{currentPage}</h2>
-          {currentPage !== totalPages && (
-            <button onClick={() => handlePage("next")}>+</button>
+          <span>{currentPage}</span>
+          {currentPage === totalPages ? (
+            <span className='space__btn'></span>
+          ) : (
+            <button onClick={() => handlePage("next")}>
+              <svg
+                className='btn__arrow-next'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 847 1058.75'
+                x='0px'
+                y='0px'
+              >
+                <g>
+                  <path
+                    class='fil0'
+                    d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z'
+                  />
+                </g>
+              </svg>
+            </button>
           )}
         </div>
       </main>
@@ -93,11 +128,3 @@ const App = () => {
 };
 
 export default App;
-
-/*
-Memo
-- make the table repeat(1fr, 12)
-- numbers should be mono
--
-
-*/

@@ -1,5 +1,6 @@
 /* --- SPACING --- */
 html {
+  --space-xs: 1vw;
   --space-s: 2vw;
   --space-m: 4.5vw;
   --space-l: 10vw;
