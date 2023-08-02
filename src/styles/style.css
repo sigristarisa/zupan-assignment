@@ -1,8 +1,52 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"); /* font-family: 'Lato', sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"); /*font-family: 'Noto Sans Mono', monospace*/
+/* --- COLORS --- */
+html {
+  --main-bg: #f5f5f5;
+  --main-acc: #225a92;
+  --secondary-acc: #56b3df;
+  --main-font: #1e1e1e;
+  --font-s: 12px;
+  --font-m: 16px;
+  --font-l: 20px;
+}
+
 main {
   width: 90vw;
   border: solid green 1px;
+  overflow: scroll;
 }
 
 table {
   width: 100%;
+  color: var(--main-font);
 }
+
+th {
+  height: 32px;
+  font-size: var(--font-s);
+  font-weight: 400;
+  border-bottom: solid var(--main-font) 1px;
+}
+
+td {
+  height: 60px;
+}
+
+.data {
+  margin-bottom: 40px;
+}
+
+.num {
+  font-family: "Noto Sans Mono", monospace;
+}
+
+/* tr,
+th,
+td {
+  height: 60px;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+} */

@@ -1,0 +1,16 @@
+.twelve-grid-columns {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid-column_one {
+  grid-column: auto/span 1;
+}
+
+.grid-column_two {
+  grid-column: auto/span 2;
+}
+
+.grid-column_five {
+  grid-column: auto/span 5;
+}

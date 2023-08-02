@@ -5,6 +5,7 @@ import { sortStrings, sortNumbers, sortDates } from "./helpers/sorters.js";
 import "./styles/reset.css";
 import "./styles/style.css";
 import "./styles/responsive.css";
+import "./styles/layout.css";
 
 const App = () => {
   const [items, setItems] = useState(data.items);
@@ -44,23 +45,23 @@ const App = () => {
     <div className='App'>
       <main>
         <table>
-          <tr>
-            <th>COUNTED AT</th>
-            <th>ID</th>
-            <th>PRODUCT</th>
-            <th>AMOUNT</th>
-            <th>PRICE/UNIT</th>
-            <th>USER</th>
+          <tr className='twelve-grid-columns data'>
+            <th className='grid-column_two'>COUNTED AT</th>
+            <th className='grid-column_one'>ID</th>
+            <th className='grid-column_five'>PRODUCT</th>
+            <th className='grid-column_one'>AMOUNT</th>
+            <th className='grid-column_one'>PRICE/UNIT</th>
+            <th className='grid-column_two'>USER</th>
           </tr>
           {setCurrentItems().map(
             ({ id, countedAt, product, quantity, price, user }) => (
-              <tr key={id}>
-                <td>{formatDate(countedAt)}</td>
-                <td>{formatId(id)}</td>
-                <td>{product}</td>
-                <td>{quantity}</td>
-                <td>{formatPrice(price)}</td>
-                <td>{user}</td>
+              <tr key={id} className='twelve-grid-columns'>
+                <td className='grid-column_two'>{formatDate(countedAt)}</td>
+                <td className='grid-column_one num'>{formatId(id)}</td>
+                <td className='grid-column_five'>{product}</td>
+                <td className='grid-column_one num'>{quantity}</td>
+                <td className='grid-column_one num'>{formatPrice(price)}</td>
+                <td className='grid-column_two'>{user}</td>
               </tr>
             )
           )}
@@ -78,3 +79,11 @@ const App = () => {
 };
 
 export default App;
+
+/*
+Memo
+- make the table repeat(1fr, 12)
+- numbers should be mono
+-
+
+*/
