@@ -1,6 +1,14 @@
+/* --- SPACING --- */
+html {
+  --space-s: 1vw;
+  --space-m: 2vw;
+  --space-l: 5vw;
+}
+
 .twelve-grid-columns {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: var(--space-m);
 }
 
 .grid-column_one {

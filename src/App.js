@@ -45,23 +45,33 @@ const App = () => {
     <div className='App'>
       <main>
         <table>
-          <tr className='twelve-grid-columns data'>
+          <tr className='twelve-grid-columns table-header'>
             <th className='grid-column_two'>COUNTED AT</th>
-            <th className='grid-column_one'>ID</th>
+            <th className='grid-column_one table-header_num'>ID</th>
             <th className='grid-column_five'>PRODUCT</th>
-            <th className='grid-column_one'>AMOUNT</th>
-            <th className='grid-column_one'>PRICE/UNIT</th>
+            <th className='grid-column_one table-header_num'>AMOUNT</th>
+            <th className='grid-column_one table-header_num'>PRICE/UNIT</th>
             <th className='grid-column_two'>USER</th>
           </tr>
           {setCurrentItems().map(
             ({ id, countedAt, product, quantity, price, user }) => (
-              <tr key={id} className='twelve-grid-columns'>
-                <td className='grid-column_two'>{formatDate(countedAt)}</td>
-                <td className='grid-column_one num'>{formatId(id)}</td>
-                <td className='grid-column_five'>{product}</td>
-                <td className='grid-column_one num'>{quantity}</td>
-                <td className='grid-column_one num'>{formatPrice(price)}</td>
-                <td className='grid-column_two'>{user}</td>
+              <tr key={id} className='twelve-grid-columns table-row'>
+                <td className='grid-column_two table-row_date'>
+                  {formatDate(countedAt)}
+                </td>
+                <td className='grid-column_one table-row_num'>
+                  {formatId(id)}
+                </td>
+                <td className='grid-column_five table-row_product'>
+                  {product}
+                </td>
+                <td className='grid-column_one table-row_num'>{quantity}</td>
+                <td className='grid-column_one table-row_num'>
+                  {formatPrice(price)}
+                </td>
+                <td className='grid-column_two table-row_user'>
+                  <a href='http://localhost:3000/'>{user}</a>
+                </td>
               </tr>
             )
           )}
