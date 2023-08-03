@@ -122,10 +122,15 @@ button {
   height: fit-content;
 }
 
-.sort-icon {
+.sort-icon,
+.sort-icon__active {
   width: 8px;
   height: 8px;
   margin: 2px;
   border-radius: 50%;
   border: var(--off-black) 1px solid;
+}
+
+.sort-icon__active {
+  background-color: var(--light-blue);
 }

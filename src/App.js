@@ -14,7 +14,7 @@ const App = () => {
   const itemsPerPage = 5;
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
-  const sortStatus = ["descendent", "ascendent", "none"];
+  const sortStatus = ["none", "descendent", "ascendent"];
   const [sortIndex, setSortIndex] = useState(0);
   const [currentSort, setCurrentSort] = useState("id");
 
@@ -41,13 +41,17 @@ const App = () => {
   };
 
   const handleSortStatus = (header, dataType) => {
+    const currentSortItem = setSortType(
+      initialItems,
+      header,
+      sortStatus[sortIndex],
+      dataType
+    );
     header === currentSort
       ? setSortIndex((sortIndex + 1) % sortStatus.length)
       : setSortIndex(0);
     setCurrentSort(header);
-    setItems(
-      setSortType(initialItems, header, sortStatus[sortIndex], dataType)
-    );
+    setItems(currentSortItem);
   };
 
   return (
@@ -60,42 +64,66 @@ const App = () => {
                 className='grid-column_two'
                 onClick={() => handleSortStatus("countedAt", "date")}
               >
-                <SortIcons />
+                <SortIcons
+                  sortStatus={sortStatus[sortIndex]}
+                  currentSort={currentSort}
+                  header={"countedAt"}
+                />
                 <p>COUNTED AT</p>
               </th>
               <th
                 className='grid-column_one table-header_num'
                 onClick={() => handleSortStatus("id", "number")}
               >
-                <SortIcons />
+                <SortIcons
+                  sortStatus={sortStatus[sortIndex]}
+                  currentSort={currentSort}
+                  header={"id"}
+                />
                 <p>ID</p>
               </th>
               <th
                 className='grid-column_four'
                 onClick={() => handleSortStatus("product", "string")}
               >
-                <SortIcons />
+                <SortIcons
+                  sortStatus={sortStatus[sortIndex]}
+                  currentSort={currentSort}
+                  header={"product"}
+                />
                 <p>PRODUCT</p>
               </th>
               <th
                 className='grid-column_one table-header_num'
                 onClick={() => handleSortStatus("quantity", "number")}
               >
-                <SortIcons />
+                <SortIcons
+                  sortStatus={sortStatus[sortIndex]}
+                  currentSort={currentSort}
+                  header={"quantity"}
+                />
                 <p>AMOUNT</p>
               </th>
               <th
                 className='grid-column_two table-header_num'
                 onClick={() => handleSortStatus("price", "number")}
               >
-                <SortIcons />
+                <SortIcons
+                  sortStatus={sortStatus[sortIndex]}
+                  currentSort={currentSort}
+                  header={"price"}
+                />
                 <p>PRICE/UNIT</p>
               </th>
               <th
                 className='grid-column_two'
-                onClick={() => handleSortStatus("product", "string")}
+                onClick={() => handleSortStatus("user", "string")}
               >
-                <SortIcons />
+                <SortIcons
+                  sortStatus={sortStatus[sortIndex]}
+                  currentSort={currentSort}
+                  header={"user"}
+                />
                 <p>USER</p>
               </th>
             </tr>
