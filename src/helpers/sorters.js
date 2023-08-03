@@ -170,7 +170,3 @@ const arr = [
     userOnInventoryCountInventoryCountId: "clkibon8k02xtm63asq7td39w",
   },
 ];
-
-console.log(sortDates(arr, "countedAt", "descendent"));
-
-// console.log(Date("2023-07-25 14:04:11.000"));

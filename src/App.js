@@ -13,8 +13,9 @@ const App = () => {
   const itemsPerPage = 5;
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
-  const sortStatus = ["none", "descendent", "ascendent"];
+  const sortStatus = ["descendent", "ascendent", "none"];
   const [sortIndex, setSortIndex] = useState(0);
+  const [currentSort, setCurrentSort] = useState("id");
 
   const setCurrentItems = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -31,9 +32,21 @@ const App = () => {
       setCurrentPage(currentPage + 1);
     }
   };
-  const handleSortStatus = (header) => {
-    setSortIndex((sortIndex + 1) % sortStatus.length);
-    setItems(sortDates(initialItems, header, sortStatus[sortIndex]));
+
+  const setSortType = (items, header, direction, dataType) => {
+    if (dataType === "number") return sortNumbers(items, header, direction);
+    if (dataType === "string") return sortStrings(items, header, direction);
+    if (dataType === "date") return sortDates(items, header, direction);
+  };
+
+  const handleSortStatus = (header, dataType) => {
+    header === currentSort
+      ? setSortIndex((sortIndex + 1) % sortStatus.length)
+      : setSortIndex(0);
+    setCurrentSort(header);
+    setItems(
+      setSortType(initialItems, header, sortStatus[sortIndex], dataType)
+    );
   };
 
   return (
@@ -44,15 +57,40 @@ const App = () => {
             <tr className='twelve-grid-columns table-header'>
               <th
                 className='grid-column_two'
-                onClick={() => handleSortStatus("countedAt")}
+                onClick={() => handleSortStatus("countedAt", "date")}
               >
                 COUNTED AT
               </th>
-              <th className='grid-column_one table-header_num'>ID</th>
-              <th className='grid-column_four'>PRODUCT</th>
-              <th className='grid-column_one table-header_num'>AMOUNT</th>
-              <th className='grid-column_two table-header_num'>PRICE/UNIT</th>
-              <th className='grid-column_two'>USER</th>
+              <th
+                className='grid-column_one table-header_num'
+                onClick={() => handleSortStatus("id", "number")}
+              >
+                ID
+              </th>
+              <th
+                className='grid-column_four'
+                onClick={() => handleSortStatus("product", "string")}
+              >
+                PRODUCT
+              </th>
+              <th
+                className='grid-column_one table-header_num'
+                onClick={() => handleSortStatus("quantity", "number")}
+              >
+                AMOUNT
+              </th>
+              <th
+                className='grid-column_two table-header_num'
+                onClick={() => handleSortStatus("quantity", "number")}
+              >
+                PRICE/UNIT
+              </th>
+              <th
+                className='grid-column_two'
+                onClick={() => handleSortStatus("product", "string")}
+              >
+                USER
+              </th>
             </tr>
             {setCurrentItems().map(
               ({ id, countedAt, product, quantity, price, user }) => (
