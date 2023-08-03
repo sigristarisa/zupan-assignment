@@ -52,8 +52,8 @@ const App = () => {
   return (
     <div className='App'>
       <main>
-        <table className='container__table'>
-          <tbody>
+        <div className='container__table'>
+          <table>
             <tr className='twelve-grid-columns table-header'>
               <th
                 className='grid-column_two'
@@ -114,8 +114,8 @@ const App = () => {
                 </tr>
               )
             )}
-          </tbody>
-        </table>
+          </table>
+        </div>
         <div className='container__page-btn'>
           {currentPage === 1 ? (
             <span className='space__btn'></span>

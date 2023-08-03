@@ -17,7 +17,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
   border: solid green 1px;
 }
 
@@ -25,11 +24,7 @@ main {
   width: 100%;
   height: 90%;
   overflow: scroll;
-  /* border: solid yellow 1px; */
-}
-
-tbody {
-  color: var(--off-black);
+  border: solid yellow 1px;
 }
 
 .table-header {
@@ -81,7 +76,7 @@ th {
   /* border: red solid 1px; */
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-self: center;
   font-size: 0.8em;
 }
 
