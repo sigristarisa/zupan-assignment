@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "./data.json";
+import SortIcons from "./Components/SortIcons";
 import { formatDate, formatId, formatPrice } from "./helpers/formatters.js";
 import { sortStrings, sortNumbers, sortDates } from "./helpers/sorters.js";
 import "./styles/reset.css";
@@ -59,37 +60,43 @@ const App = () => {
                 className='grid-column_two'
                 onClick={() => handleSortStatus("countedAt", "date")}
               >
-                COUNTED AT
+                <SortIcons />
+                <p>COUNTED AT</p>
               </th>
               <th
                 className='grid-column_one table-header_num'
                 onClick={() => handleSortStatus("id", "number")}
               >
-                ID
+                <SortIcons />
+                <p>ID</p>
               </th>
               <th
                 className='grid-column_four'
                 onClick={() => handleSortStatus("product", "string")}
               >
-                PRODUCT
+                <SortIcons />
+                <p>PRODUCT</p>
               </th>
               <th
                 className='grid-column_one table-header_num'
                 onClick={() => handleSortStatus("quantity", "number")}
               >
-                AMOUNT
+                <SortIcons />
+                <p>AMOUNT</p>
               </th>
               <th
                 className='grid-column_two table-header_num'
-                onClick={() => handleSortStatus("quantity", "number")}
+                onClick={() => handleSortStatus("price", "number")}
               >
-                PRICE/UNIT
+                <SortIcons />
+                <p>PRICE/UNIT</p>
               </th>
               <th
                 className='grid-column_two'
                 onClick={() => handleSortStatus("product", "string")}
               >
-                USER
+                <SortIcons />
+                <p>USER</p>
               </th>
             </tr>
             {setCurrentItems().map(
