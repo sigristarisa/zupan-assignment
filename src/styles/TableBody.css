@@ -1,5 +1,5 @@
 .table-row {
-  height: calc((80vh * 0.8 - 32px) / 5);
+  height: calc((80vh * 0.9 - 180px) / 5);
   border-bottom: solid var(--grey) 1px;
   display: grid;
   align-items: center;

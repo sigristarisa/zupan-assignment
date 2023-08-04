@@ -1,10 +1,13 @@
 import "../styles/TableTitle.css";
 
-const TableTitle = () => {
+const TableTitle = ({ openFilter, setOpenFilter }) => {
   return (
     <div className='container__table-title'>
       <h1>Your Inventory</h1>
-      <div className='container__filter-icon'>
+      <div
+        className='container__filter-icon'
+        onClick={() => setOpenFilter(!openFilter)}
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 -4 32 40'
