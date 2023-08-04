@@ -10,11 +10,14 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: "Lato", sans-serif;
   display: grid;
   place-items: center;
 }
 
 p {
   margin: 0;
+}
+
+button {
+  padding: 0;
 }

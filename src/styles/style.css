@@ -9,6 +9,20 @@ html {
   --blue: #225a92;
   --light-blue: #56b3df;
   --off-black: #1e1e1e;
+
+  --font-color: var(--off-black);
+  --bg-color: var(--off-grey);
+}
+
+body.dark-mode {
+  --font-color: var(--off-grey);
+  --bg-color: var(--off-black);
+}
+
+body {
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  font-family: "Lato", sans-serif;
 }
 
 main {
@@ -141,26 +155,7 @@ button:hover {
   background-color: var(--light-blue);
 }
 
-.container__table-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .icon__filter {
   width: 24px;
   height: 24px;
-}
-
-.container__filter-icon {
-  padding: 8px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-
-.container__filter-icon:hover {
-  background-color: var(--off-grey);
 }

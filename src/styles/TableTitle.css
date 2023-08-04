@@ -1,0 +1,18 @@
+.container__table-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__filter-icon {
+  padding: 8px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.container__filter-icon:hover {
+  background-color: var(--grey);
+}
