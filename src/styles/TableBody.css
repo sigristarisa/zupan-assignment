@@ -1,0 +1,25 @@
+.table-row {
+  height: calc((80vh * 0.8 - 32px) / 5);
+  border-bottom: solid var(--grey) 1px;
+  display: grid;
+  align-items: center;
+}
+
+.table-row_num {
+  font-family: "Noto Sans Mono", monospace;
+  text-align: right;
+}
+
+.table-row_date {
+  font-size: 0.9em;
+}
+
+.table-row_product {
+  font-size: 1.5em;
+}
+
+.table-row_user a {
+  color: var(--link-color);
+  font-size: 0.9em;
+  font-style: italic;
+}
