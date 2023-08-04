@@ -12,14 +12,29 @@ html {
 
   --font-color: var(--off-black);
   --bg-color: var(--off-grey);
+  --border-color: var(--off-black);
+  --link-color: var(--blue);
+  --icon-color: var(--off-black);
+  --icon-hover-color: (--off-black);
+  --icon-hover-bg-color: var(--grey);
 }
 
 body.dark-mode {
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
+
   --font-color: var(--off-grey);
   --bg-color: var(--off-black);
+  --border-color: var(--off-grey);
+  --link-color: var(--light-blue);
+  --icon-color: var(--off-grey);
+  --icon-hover-color: (--off-black);
 }
 
 body {
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
+
   color: var(--font-color);
   background-color: var(--bg-color);
   font-family: "Lato", sans-serif;
@@ -31,7 +46,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: solid green 1px; */
 }
 
 .container__table {
@@ -44,7 +58,7 @@ main {
   height: 40px;
   margin-bottom: 40px;
   font-size: 0.8em;
-  border-bottom: solid var(--off-black) 1px;
+  border-bottom: solid var(--border-color) 1px;
   align-items: center;
 }
 
@@ -85,7 +99,7 @@ th:hover {
 }
 
 .table-row_user a {
-  color: var(--blue);
+  color: var(--link-color);
   font-size: 0.9em;
   font-style: italic;
 }
@@ -93,14 +107,13 @@ th:hover {
 .container__page-btn {
   width: 8vw;
   height: 10%;
-  /* border: red solid 1px; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 0.8em;
 }
 
-button {
+.container__arrow-icon {
   width: 24px;
   height: 24px;
   padding: 4px 8px;
@@ -121,8 +134,8 @@ button {
 .btn__arrow-next {
   width: 8px;
   height: 8px;
-  border-left: solid 1.5px var(--off-black);
-  border-bottom: solid 1.5px var(--off-black);
+  border-left: solid 1.5px var(--border-color);
+  border-bottom: solid 1.5px var(--border-color);
 }
 
 .btn__arrow-back {
@@ -133,9 +146,19 @@ button {
   transform: rotate(-135deg);
 }
 
-button:hover {
-  background-color: var(--off-grey);
+.container__arrow-icon:hover {
+  background-color: var(--icon-hover-bg-color);
 }
+
+.btn__arrow-back:hover,
+.btn__arrow-next:hover {
+  border-left: solid 1.5px var(--icon-hover-color);
+  border-bottom: solid 1.5px var(--icon-hover-color);
+}
+
+/* button:hover {
+  background-color: var(--off-grey);
+} */
 
 .container__sort-icons {
   width: fit-content;
@@ -148,7 +171,7 @@ button:hover {
   height: 8px;
   margin: 2px;
   border-radius: 50%;
-  border: var(--off-black) 1px solid;
+  border: var(--border-color) 1px solid;
 }
 
 .sort-icon__active {

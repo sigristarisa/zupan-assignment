@@ -14,5 +14,13 @@
 }
 
 .container__filter-icon:hover {
-  background-color: var(--grey);
+  background-color: var(--icon-hover-bg-color);
+}
+
+.icon__filter {
+  fill: var(--icon-color);
+}
+
+.icon__filter:hover {
+  fill: var(--icon-hover-color);
 }

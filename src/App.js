@@ -164,7 +164,10 @@ const App = () => {
           {currentPage === 1 ? (
             <div className='space__btn'></div>
           ) : (
-            <button onClick={() => handlePage("back")}>
+            <button
+              className='container__arrow-icon'
+              onClick={() => handlePage("back")}
+            >
               <div className='btn__arrow-back'></div>
             </button>
           )}
@@ -172,7 +175,10 @@ const App = () => {
           {currentPage === totalPages ? (
             <div className='space__btn'></div>
           ) : (
-            <button onClick={() => handlePage("next")}>
+            <button
+              className='container__arrow-icon'
+              onClick={() => handlePage("next")}
+            >
               <div className='btn__arrow-next'></div>
             </button>
           )}
