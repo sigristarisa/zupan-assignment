@@ -1,13 +1,26 @@
+import { useEffect, useContext } from "react";
+import { itemsContext } from "../helpers/createContext";
 import { formatDate, formatId, formatPrice } from "../helpers/formatters";
 import "../styles/TableBody.css";
 
-const TableBody = ({ items, currentPage, itemsPerPage }) => {
+const TableBody = ({ currentPage, itemsPerPage }) => {
+  const { items } = useContext(itemsContext);
+
   const setCurrentItems = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+
     return currentItems;
   };
+
+  console.log("items in body", items);
+
+  useEffect(() => {
+    setCurrentItems();
+    console.log("hellllooooooo?????");
+  }, [items]);
+
   return (
     <tbody>
       {setCurrentItems().map(

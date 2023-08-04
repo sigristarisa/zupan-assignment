@@ -15,7 +15,7 @@ html {
   --border-color: var(--off-black);
   --link-color: var(--blue);
   --icon-color: var(--off-black);
-  --icon-hover-color: (--off-black);
+  --icon-hover-color: var(--off-black);
   --icon-hover-bg-color: var(--grey);
 }
 
@@ -51,6 +51,7 @@ main {
 .container__table {
   width: 100%;
   height: 90%;
+  position: relative;
   overflow: scroll;
 }
 
@@ -60,6 +61,10 @@ main {
   font-size: 0.8em;
   border-bottom: solid var(--border-color) 1px;
   align-items: center;
+}
+
+.sort--active {
+  font-weight: 600;
 }
 
 th {
