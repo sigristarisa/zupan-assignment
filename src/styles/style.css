@@ -17,7 +17,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid green 1px;
+  /* border: solid green 1px; */
 }
 
 .container__table {
@@ -40,6 +40,10 @@ th {
   gap: 4px;
   font-weight: 300;
   cursor: pointer;
+}
+
+th:hover {
+  font-weight: 600;
 }
 
 .table-row {
@@ -83,11 +87,12 @@ th {
 }
 
 button {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
+  padding: 4px 8px;
   background-color: transparent;
+  border-radius: 50%;
   border: none;
-  padding: 0;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -100,21 +105,22 @@ button {
 
 .btn__arrow-back,
 .btn__arrow-next {
-  width: 1.5em;
-  height: 1.5em;
+  width: 8px;
+  height: 8px;
+  border-left: solid 1.5px var(--off-black);
+  border-bottom: solid 1.5px var(--off-black);
 }
 
 .btn__arrow-back {
-  transform: rotate(90deg);
+  transform: rotate(45deg);
 }
 
 .btn__arrow-next {
-  transform: rotate(-90deg);
+  transform: rotate(-135deg);
 }
 
-.btn__arrow-back:hover,
-.btn__arrow-next:hover {
-  fill: var(--grey);
+button:hover {
+  background-color: var(--off-grey);
 }
 
 .container__sort-icons {
@@ -133,4 +139,28 @@ button {
 
 .sort-icon__active {
   background-color: var(--light-blue);
+}
+
+.container__table-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon__filter {
+  width: 24px;
+  height: 24px;
+}
+
+.container__filter-icon {
+  padding: 8px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.container__filter-icon:hover {
+  background-color: var(--off-grey);
 }

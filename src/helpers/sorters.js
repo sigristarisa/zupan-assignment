@@ -9,9 +9,9 @@ export const sortStrings = (items, header, direction) => {
 export const sortNumbers = (items, header, direction) => {
   if (direction === "none") return items;
   if (direction === "descendent")
-    return items.sort((a, b) => b[header] - a[header]);
-  if (direction === "ascendent")
     return items.sort((a, b) => a[header] - b[header]);
+  if (direction === "ascendent")
+    return items.sort((a, b) => b[header] - a[header]);
 };
 
 export const sortDates = (items, header, direction) => {

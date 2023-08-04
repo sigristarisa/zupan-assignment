@@ -1,6 +1,7 @@
 import { useState } from "react";
 import data from "./data.json";
 import SortIcons from "./Components/SortIcons";
+import TableHeader from "./Components/TableHeader";
 import { formatDate, formatId, formatPrice } from "./helpers/formatters.js";
 import { sortStrings, sortNumbers, sortDates } from "./helpers/sorters.js";
 import "./styles/reset.css";
@@ -15,8 +16,8 @@ const App = () => {
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(1);
   const sortStatus = ["none", "descendent", "ascendent"];
-  const [sortIndex, setSortIndex] = useState(0);
-  const [currentSort, setCurrentSort] = useState("id");
+  const [sortIndex, setSortIndex] = useState(1);
+  const [currentSort, setCurrentSort] = useState("default");
 
   const setCurrentItems = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -41,21 +42,22 @@ const App = () => {
   };
 
   const handleSortStatus = (header, dataType) => {
-    const currentSortItem = setSortType(
-      initialItems,
-      header,
-      sortStatus[sortIndex],
-      dataType
+    if (header === currentSort) {
+      console.log("condi");
+      setSortIndex((sortIndex + 1) % sortStatus.length);
+    } else {
+      setCurrentSort(header);
+      setSortIndex(1);
+    }
+    setItems(
+      setSortType(initialItems, header, sortStatus[sortIndex], dataType)
     );
-    header === currentSort
-      ? setSortIndex((sortIndex + 1) % sortStatus.length)
-      : setSortIndex(0);
-    setCurrentSort(header);
-    setItems(currentSortItem);
+    console.log("sort", sortStatus[sortIndex]);
   };
 
   return (
     <div className='App'>
+      <TableHeader />
       <main>
         <div className='container__table'>
           <table>
@@ -153,39 +155,18 @@ const App = () => {
         </div>
         <div className='container__page-btn'>
           {currentPage === 1 ? (
-            <span className='space__btn'></span>
+            <div className='space__btn'></div>
           ) : (
             <button onClick={() => handlePage("back")}>
-              {" "}
-              <svg
-                className='btn__arrow-back'
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 847 1058.75'
-                x='0px'
-                y='0px'
-              >
-                <g>
-                  <path d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z' />
-                </g>
-              </svg>
+              <div className='btn__arrow-back'></div>
             </button>
           )}
           <span>{currentPage}</span>
           {currentPage === totalPages ? (
-            <span className='space__btn'></span>
+            <div className='space__btn'></div>
           ) : (
             <button onClick={() => handlePage("next")}>
-              <svg
-                className='btn__arrow-next'
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 847 1058.75'
-                x='0px'
-                y='0px'
-              >
-                <g>
-                  <path d='M242 298l181 185 182 -185c24,-25 65,16 40,41l-205 211c-9,9 -24,9 -32,0l-207 -211c-24,-25 17,-66 41,-41z' />
-                </g>
-              </svg>
+              <div className='btn__arrow-next'></div>
             </button>
           )}
         </div>
