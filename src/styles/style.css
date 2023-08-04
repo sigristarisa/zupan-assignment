@@ -104,62 +104,6 @@ th:hover {
   font-style: italic;
 }
 
-.container__page-btn {
-  width: 8vw;
-  height: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 0.8em;
-}
-
-.container__arrow-icon {
-  width: 24px;
-  height: 24px;
-  padding: 4px 8px;
-  background-color: transparent;
-  border-radius: 50%;
-  border: none;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-}
-
-.space__btn {
-  height: 100%;
-  width: 40px;
-}
-
-.btn__arrow-back,
-.btn__arrow-next {
-  width: 8px;
-  height: 8px;
-  border-left: solid 1.5px var(--border-color);
-  border-bottom: solid 1.5px var(--border-color);
-}
-
-.btn__arrow-back {
-  transform: rotate(45deg);
-}
-
-.btn__arrow-next {
-  transform: rotate(-135deg);
-}
-
-.container__arrow-icon:hover {
-  background-color: var(--icon-hover-bg-color);
-}
-
-.btn__arrow-back:hover,
-.btn__arrow-next:hover {
-  border-left: solid 1.5px var(--icon-hover-color);
-  border-bottom: solid 1.5px var(--icon-hover-color);
-}
-
-/* button:hover {
-  background-color: var(--off-grey);
-} */
-
 .container__sort-icons {
   width: fit-content;
   height: fit-content;
