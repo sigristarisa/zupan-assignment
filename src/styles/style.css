@@ -12,6 +12,7 @@ html {
 
   --font-color: var(--off-black);
   --bg-color: var(--off-grey);
+  --filter-bg-color: var(--off-black);
   --border-color: var(--off-black);
   --link-color: var(--blue);
   --icon-color: var(--off-black);

@@ -23,3 +23,14 @@ html {
 .grid-column_four {
   grid-column: auto/span 4;
 }
+
+.grid-column__expand-1fr {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.flex__justify-content--start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

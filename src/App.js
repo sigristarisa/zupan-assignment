@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from "./data.json";
 import Header from "./Components/Header";
 import Filter from "./Components/Filter";
+import FilterBackground from "./Components/FilterBackground";
 import TableTitle from "./Components/TableTitle";
 import TableHeader from "./Components/TableHeader";
 import TableBody from "./Components/TableBody";
@@ -19,13 +20,16 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [openFilter, setOpenFilter] = useState(false);
 
-  console.log("openFIlter", openFilter);
-
   return (
     <itemsContext.Provider value={{ items, setItems }}>
       <div className='App'>
+        {openFilter && (
+          <div className='container__filter'>
+            <Filter openFilter={openFilter} setOpenFilter={setOpenFilter} />
+            <FilterBackground />
+          </div>
+        )}
         <Header />
-        {openFilter && <Filter />}
         <main>
           <TableTitle openFilter={openFilter} setOpenFilter={setOpenFilter} />
           <div className='container__table'>
