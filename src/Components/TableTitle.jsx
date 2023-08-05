@@ -4,6 +4,9 @@ const TableTitle = ({ openFilter, setOpenFilter }) => {
   return (
     <div className='container__table-title'>
       <h1>Your Inventory</h1>
+      <div>
+        <input type='text' />
+      </div>
       <div
         className='container__filter-icon'
         onClick={() => setOpenFilter(!openFilter)}

@@ -34,13 +34,6 @@ const Filter = ({ openFilter, setOpenFilter }) => {
         </section>
         <section className='container__filter-category'>
           <h2>Quantity</h2>
-          <input type='number' />
-          <span>–</span>
-          <input type='number' />
-        </section>
-        <section className='container__filter-category'>
-          <h2>Price</h2>
-          <input type='number' value={prices[0]} />
           <div className='container__price-range'>
             <input
               className='input-range__price-min'
@@ -60,6 +53,39 @@ const Filter = ({ openFilter, setOpenFilter }) => {
               value={prices[1]}
               onChange={handlePrice}
             />
+          </div>
+          <div className='container__price-input'>
+            <input type='number' value={prices[0]} />
+            <span>–</span>
+            <input type='number' value={prices[1]} />
+          </div>
+        </section>
+        <section className='container__filter-category'>
+          <h2>Price</h2>
+          <div className='container__price-range'>
+            <input
+              className='input-range__price-min'
+              type='range'
+              name='min-price'
+              min={prices[0]}
+              max={prices[1]}
+              value={prices[0]}
+              onChange={handlePrice}
+            />
+            <input
+              className='input-range__price-max'
+              type='range'
+              name='max-price'
+              min={prices[0]}
+              max={prices[1]}
+              value={prices[1]}
+              onChange={handlePrice}
+            />
+          </div>
+          <div className='container__price-input'>
+            <input type='number' value={prices[0]} />
+            <span>–</span>
+            <input type='number' value={prices[1]} />
           </div>
         </section>
         <div className='footer__filter'>

@@ -18,6 +18,8 @@ html {
   --icon-color: var(--off-black);
   --icon-hover-color: var(--off-black);
   --icon-hover-bg-color: var(--grey);
+  --slider-color: var(--blue);
+  --slider-hover-color: var(--light-blue);
 }
 
 body.dark-mode {
