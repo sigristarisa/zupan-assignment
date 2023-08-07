@@ -1,3 +1,7 @@
+.table-row:first-child {
+  margin-top: 40px;
+}
+
 .table-row {
   height: calc((80vh * 0.9 - 180px) / 5);
   border-bottom: solid var(--grey) 1px;

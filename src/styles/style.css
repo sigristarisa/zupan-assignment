@@ -64,7 +64,6 @@ main {
 
 .table-header {
   height: 40px;
-  margin-bottom: 40px;
   font-size: 0.8em;
   border-bottom: solid var(--border-color) 1px;
   align-items: center;
@@ -80,6 +79,12 @@ th {
   gap: 4px;
   font-weight: 300;
   cursor: pointer;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
 }
 
 th:hover {
