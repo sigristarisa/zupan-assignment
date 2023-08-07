@@ -4,7 +4,8 @@ html {
   --space-s: 1.5vw;
   --space-m: 4.5vw;
   --space-l: 10vw;
-  --space-column-m: 2vh;
+  --space-column-s: 0.2vh;
+  --space-column-m: 10vh;
 }
 
 .twelve-grid-columns {

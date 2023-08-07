@@ -16,7 +16,7 @@ import "./styles/responsive.css";
 const App = () => {
   const initialItems = data.items;
   const [items, setItems] = useState(initialItems);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const [openFilter, setOpenFilter] = useState(false);
 

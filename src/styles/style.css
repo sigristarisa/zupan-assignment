@@ -4,6 +4,7 @@
 
 /* --- COLORS--- */
 html {
+  --dark-grey: #b0b0b0;
   --grey: #d8d8d8;
   --off-grey: #f5f5f5;
   --blue: #225a92;
@@ -14,12 +15,13 @@ html {
   --bg-color: var(--off-grey);
   --filter-bg-color: var(--off-black);
   --border-color: var(--off-black);
+  --table-border-color: var(--grey);
   --link-color: var(--blue);
   --icon-color: var(--off-black);
   --icon-hover-color: var(--off-black);
   --icon-hover-bg-color: var(--light-blue);
-  --slider-color: var(--blue);
-  --slider-hover-color: var(--light-blue);
+  --slider-color: var(--dark-grey);
+  --slider-track-color: var(--dark-grey);
   --search-color: var(--blue);
   --search-border-color: var(--blue);
 }
