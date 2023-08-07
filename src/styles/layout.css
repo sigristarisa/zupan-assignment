@@ -13,6 +13,16 @@ html {
   grid-column-gap: var(--space-m);
 }
 
+.two-grid-column__extend-one {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.two-grid-column__extend-two {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
 .grid-column_one {
   grid-column: auto/span 1;
 }

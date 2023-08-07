@@ -17,9 +17,11 @@ html {
   --link-color: var(--blue);
   --icon-color: var(--off-black);
   --icon-hover-color: var(--off-black);
-  --icon-hover-bg-color: var(--grey);
+  --icon-hover-bg-color: var(--light-blue);
   --slider-color: var(--blue);
   --slider-hover-color: var(--light-blue);
+  --search-color: var(--blue);
+  --search-border-color: var(--blue);
 }
 
 body.dark-mode {
@@ -31,7 +33,9 @@ body.dark-mode {
   --border-color: var(--off-grey);
   --link-color: var(--light-blue);
   --icon-color: var(--off-grey);
-  --icon-hover-color: (--off-black);
+  --icon-hover-color: (--off-grey);
+  --search-color: var(--off-grey);
+  --search-border-color: var(--off-grey);
 }
 
 body {

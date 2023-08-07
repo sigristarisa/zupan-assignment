@@ -11,6 +11,10 @@
     --space-m: 5vw;
   }
 
+  .container__input-search {
+    width: 90vw;
+  }
+
   table {
     width: 120vw;
   }

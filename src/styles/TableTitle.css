@@ -1,8 +1,41 @@
 .container__table-title {
   width: 100%;
+  margin-bottom: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.container__table-title h1 {
+  height: 100%;
+}
+
+.container__table-title--right {
+  place-items: center;
+  justify-items: end;
+  gap: var(--space-s);
+}
+
+.container__input-search {
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input__search {
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--search-border-color);
+  opacity: 0.5;
+}
+
+.input__search::placeholder {
+  color: var(--search-color);
+  font-family: "Lato", sans-serif;
 }
 
 .container__filter-icon {
