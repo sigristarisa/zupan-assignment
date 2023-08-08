@@ -17,8 +17,8 @@ const TableBody = ({ currentPage, itemsPerPage }) => {
   return (
     <tbody>
       {setCurrentItems().map(
-        ({ id, countedAt, product, quantity, price, user }) => (
-          <tr key={id} className='twelve-grid-columns table-row'>
+        ({ id, countedAt, product, quantity, price, user }, index) => (
+          <tr key={index} className='twelve-grid-columns table-row'>
             <td className='grid-column_two table-row_date'>
               {formatDate(countedAt)}
             </td>

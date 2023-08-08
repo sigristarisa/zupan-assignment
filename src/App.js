@@ -26,7 +26,7 @@ const App = () => {
         {openFilter && (
           <div className='container__filter'>
             <Filter openFilter={openFilter} setOpenFilter={setOpenFilter} />
-            <FilterBackground />
+            <FilterBackground openFilter={openFilter} />
           </div>
         )}
         <Header />
