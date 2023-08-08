@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import SortIcons from "./SortIcons";
 import { itemsContext } from "../helpers/createContext";
 import { sortStrings, sortNumbers, sortDates } from "../helpers/sorters";
+import "../styles/TableHeader.css";
 
 const TableHeader = ({ initialItems }) => {
   const { setItems } = useContext(itemsContext);
