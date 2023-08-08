@@ -1,17 +1,17 @@
 .container__table-title {
-  width: 100%;
-  margin-bottom: 10vh;
+  width: 90vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.container__table-title h1 {
-  height: 100%;
+.desktop {
+  width: 90vw;
+  display: grid;
+  align-items: center;
 }
 
 .container__table-title--right {
-  place-items: center;
   justify-items: end;
   gap: var(--space-s);
 }
@@ -26,8 +26,8 @@
 .input__search {
   height: 100%;
   width: 100%;
-  text-align: right;
   border: none;
+  text-align: right;
   background-color: transparent;
   border-bottom: 1px solid var(--search-border-color);
   opacity: 0.5;
@@ -52,8 +52,4 @@
 
 .icon__filter {
   fill: var(--icon-color);
-}
-
-.icon__filter:hover {
-  fill: var(--icon-hover-color);
 }

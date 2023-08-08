@@ -21,7 +21,7 @@
 
 .space__btn {
   height: 100%;
-  width: 40px;
+  width: 24px;
 }
 
 .btn__arrow-back,
@@ -42,10 +42,4 @@
 
 .container__arrow-icon:hover {
   background-color: var(--icon-hover-bg-color);
-}
-
-.btn__arrow-back:hover,
-.btn__arrow-next:hover {
-  border-left: solid 1.5px var(--icon-hover-color);
-  border-bottom: solid 1.5px var(--icon-hover-color);
 }

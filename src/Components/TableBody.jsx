@@ -14,13 +14,6 @@ const TableBody = ({ currentPage, itemsPerPage }) => {
     return currentItems;
   };
 
-  console.log("items in body", items);
-
-  useEffect(() => {
-    setCurrentItems();
-    console.log("hellllooooooo?????");
-  }, [items]);
-
   return (
     <tbody>
       {setCurrentItems().map(

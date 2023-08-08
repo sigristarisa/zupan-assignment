@@ -11,7 +11,17 @@
     --space-m: 5vw;
   }
 
+  .container__table-title {
+    margin-bottom: 40px;
+  }
+
   .container__input-search {
+    width: 90vw;
+    display: grid;
+    place-items: center;
+  }
+
+  .input__search {
     width: 90vw;
   }
 
