@@ -11,7 +11,7 @@
 .container__filter-content {
   width: 60%;
   height: 70vh;
-  background-color: var(--bg-color);
+  background-color: var(--filter-bg-color);
   border-radius: 12px;
   position: absolute;
   z-index: 2;
@@ -43,7 +43,7 @@
   position: absolute;
   width: 16px;
   height: 2px;
-  background-color: var(--off-black);
+  background-color: var(--border-color);
   border-radius: 2px;
 }
 
@@ -118,6 +118,7 @@
   height: 32px;
   width: 32px;
   border-radius: 50%;
+  border: solid 1px var(--slider-track-color);
   background: var(--slider-color);
   cursor: ew-resize;
   position: absolute;
@@ -153,6 +154,7 @@
   height: 32px;
   width: 32px;
   border-radius: 50%;
+  border: solid 1px var(--slider-track-color);
   background: var(--slider-color);
   cursor: ew-resize;
   position: absolute;
@@ -203,6 +205,7 @@
 
 .btn__clear-all {
   width: 10vw;
+  color: var(--font-color);
   background-color: transparent;
   border: none;
   text-decoration: underline;

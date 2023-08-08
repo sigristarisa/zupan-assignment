@@ -9,18 +9,19 @@ html {
   --off-grey: #f5f5f5;
   --blue: #225a92;
   --light-blue: #56b3df;
+  --light-black: #343333;
   --off-black: #1e1e1e;
 
   --font-color: var(--off-black);
   --bg-color: var(--off-grey);
-  --filter-bg-color: var(--off-black);
+  --filter-bg-color: var(--off-grey);
   --border-color: var(--off-black);
   --table-border-color: var(--grey);
   --link-color: var(--blue);
   --icon-color: var(--off-black);
   --icon-hover-color: var(--off-black);
   --icon-hover-bg-color: var(--light-blue);
-  --slider-color: var(--dark-grey);
+  --slider-color: var(--off-grey);
   --slider-track-color: var(--dark-grey);
   --search-color: var(--blue);
   --search-border-color: var(--blue);
@@ -32,6 +33,7 @@ body.dark-mode {
 
   --font-color: var(--off-grey);
   --bg-color: var(--off-black);
+  --filter-bg-color: var(--light-black);
   --border-color: var(--off-grey);
   --link-color: var(--light-blue);
   --icon-color: var(--off-grey);
