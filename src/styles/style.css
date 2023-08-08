@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"); /* font-family: 'Lato', sans-serif */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"); /*font-family: 'Noto Sans Mono', monospace*/
 
-/* --- COLORS--- */
+/* --- COLORS & SIZES--- */
 html {
   --dark-grey: #b0b0b0;
   --grey: #d8d8d8;
@@ -11,6 +11,8 @@ html {
   --light-blue: #56b3df;
   --light-black: #343333;
   --off-black: #1e1e1e;
+
+  --size-icon: 24px;
 
   --font-color: var(--off-black);
   --bg-color: var(--off-grey);
@@ -105,18 +107,13 @@ th:hover {
 
 .sort-icon,
 .sort-icon__active {
-  width: 8px;
-  height: 8px;
-  margin: 2px;
+  width: 0.6em;
+  height: 0.6em;
+  margin: 0.1em;
   border-radius: 50%;
   border: var(--border-color) 1px solid;
 }
 
 .sort-icon__active {
   background-color: var(--light-blue);
-}
-
-.icon__filter {
-  width: 24px;
-  height: 24px;
 }

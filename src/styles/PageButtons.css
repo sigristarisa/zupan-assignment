@@ -8,8 +8,8 @@
 }
 
 .container__arrow-icon {
-  width: 24px;
-  height: 24px;
+  width: var(--size-icon);
+  height: var(--size-icon);
   padding: 4px 8px;
   background-color: transparent;
   border-radius: 50%;
@@ -21,7 +21,7 @@
 
 .space__btn {
   height: 100%;
-  width: 24px;
+  width: var(--size-icon);
 }
 
 .btn__arrow-back,

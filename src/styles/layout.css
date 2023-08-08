@@ -3,9 +3,6 @@ html {
   --space-xs: 0.8vw;
   --space-s: 1.5vw;
   --space-m: 4.5vw;
-  --space-l: 10vw;
-  --space-column-s: 0.2vh;
-  --space-column-m: 10vh;
 }
 
 .twelve-grid-columns {
@@ -24,6 +21,11 @@ html {
   grid-template-columns: auto 1fr;
 }
 
+.three-grid-column__extend-middle {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
 .grid-column_one {
   grid-column: auto/span 1;
 }
@@ -36,9 +38,9 @@ html {
   grid-column: auto/span 4;
 }
 
-.grid-column__expand-1fr {
+.grid__place-item--center {
   display: grid;
-  grid-template-columns: auto 1fr;
+  place-items: center;
 }
 
 .flex__justify-content--start {

@@ -4,12 +4,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: grid;
-  place-items: center;
   opacity: 0;
   animation: fadeIn ease-in 1;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   z-index: 2;
 }
 
@@ -38,12 +36,10 @@
 }
 
 .icon__close-filter {
-  width: 24px;
-  height: 24px;
+  width: var(--size-icon);
+  height: var(--size-icon);
   position: relative;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
   cursor: pointer;
 }
 
@@ -71,7 +67,7 @@
 
 .title__filter {
   text-align: center;
-  padding-right: 24px;
+  padding-right: var(--size-icon);
   margin: 0;
 }
 
@@ -93,8 +89,6 @@
   overflow: scroll;
   border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
-  display: grid;
-  place-items: center;
 }
 
 .container__filter-category {
@@ -188,13 +182,6 @@
 .container__amount-input,
 .container__price-input {
   height: 10vh;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  place-items: center;
-}
-
-.container__date-input {
-  display: grid;
 }
 
 .container__date-input input[type="date"],

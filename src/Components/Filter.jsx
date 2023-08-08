@@ -16,19 +16,19 @@ const Filter = ({ openFilter, setOpenFilter }) => {
 
   return (
     <div className='container__filter-content'>
-      <div className='header__filter grid-column__expand-1fr'>
+      <div className='header__filter two-grid-column__extend-two'>
         <div
-          className='icon__close-filter '
+          className='icon__close-filter grid__place-item--center'
           onClick={() => setOpenFilter(!openFilter)}
         ></div>
         <div className='container__filter-title'>
           <h3 className='title__filter'>Filters</h3>
         </div>
       </div>
-      <div className='main__filter'>
+      <div className='main__filter grid__place-item--center'>
         <section className='container__filter-category'>
           <h2>Counted At</h2>
-          <div className='container__date'>
+          <div className='container__date three-grid-column__extend-middle grid__place-item--center'>
             <div className='container__date-input'>
               <label htmlFor='input__min-date'>From</label>
               <input
@@ -74,7 +74,7 @@ const Filter = ({ openFilter, setOpenFilter }) => {
               onChange={handlePrice}
             />
           </div>
-          <div className='container__amount-input'>
+          <div className='container__amount-input three-grid-column__extend-middle grid__place-item--center'>
             <input type='number' value={amount[0]} />
             <span>–</span>
             <input type='number' value={amount[1]} />
@@ -102,7 +102,7 @@ const Filter = ({ openFilter, setOpenFilter }) => {
               onChange={handlePrice}
             />
           </div>
-          <div className='container__price-input'>
+          <div className='container__price-input three-grid-column__extend-middle grid__place-item--center'>
             <input type='number' value={prices[0]} />
             <span>–</span>
             <input type='number' value={prices[1]} />
