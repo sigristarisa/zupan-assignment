@@ -2,8 +2,6 @@ header {
   width: 90vw;
   height: 10vh;
   font-size: 0.8em;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .container__mode {

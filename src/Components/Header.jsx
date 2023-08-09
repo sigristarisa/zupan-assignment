@@ -5,12 +5,13 @@ const Header = () => {
   const [darkActive, setDarkActive] = useState(false);
 
   const handleMode = () => setDarkActive(!darkActive);
+
   darkActive
     ? document.body.setAttribute("class", "dark-mode")
     : document.body.removeAttribute("class", "dark-mode");
 
   return (
-    <header>
+    <header className='flex__justify-content--end'>
       <div className='container__mode'>
         <span
           className={!darkActive && "screen-mode--active"}
