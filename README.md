@@ -17,10 +17,12 @@
 ### Language & Framework 
 - React.js => This allows to also showcase HTML skills
 - CSS
-### Structure
+### Files
 - ``src/Components``: Components that constructs the app
 - ``src/styles``: CSS files that adds styling to the app</br>
  &nbsp;&nbsp;&nbsp;&nbsp;- ```reset.css```: Resets default styling of elements</br>
  &nbsp;&nbsp;&nbsp;&nbsp;- ```layout.css```: Any styling related to layouts. Utilized these classes like in Tailwind CSS</br>
  &nbsp;&nbsp;&nbsp;&nbsp;- ```responsive.css```: Styling related to responseiveness</br>
  &nbsp;&nbsp;&nbsp;&nbsp;- remaining css files: Related to each Components with the same naming</br>
+
+By separating CSS files allows to be organized 
