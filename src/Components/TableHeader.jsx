@@ -32,9 +32,11 @@ const TableHeader = ({ initialItems }) => {
   };
   return (
     <thead>
-      <tr className='twelve-grid-columns table-header'>
+      <tr className='container__table-header twelve-grid-columns'>
         <th
-          className={`grid-column_two ${setActiveHeader("countedAt")}`}
+          className={`grid-column_two flex__align-items--center ${setActiveHeader(
+            "countedAt"
+          )}`}
           onClick={() => handleSortStatus("countedAt", "date")}
         >
           <SortIcons
@@ -45,7 +47,7 @@ const TableHeader = ({ initialItems }) => {
           <p>COUNTED AT</p>
         </th>
         <th
-          className={`grid-column_one table-header_num ${setActiveHeader(
+          className={`grid-column_one flex__align-items--center flex__justify-content--end ${setActiveHeader(
             "id"
           )}`}
           onClick={() => handleSortStatus("id", "number")}
@@ -58,7 +60,9 @@ const TableHeader = ({ initialItems }) => {
           <p>ID</p>
         </th>
         <th
-          className={`grid-column_four ${setActiveHeader("product")}`}
+          className={`grid-column_four flex__align-items--center ${setActiveHeader(
+            "product"
+          )}`}
           onClick={() => handleSortStatus("product", "string")}
         >
           <SortIcons
@@ -69,7 +73,7 @@ const TableHeader = ({ initialItems }) => {
           <p>PRODUCT</p>
         </th>
         <th
-          className={`grid-column_one table-header_num ${setActiveHeader(
+          className={`grid-column_one flex__align-items--center flex__justify-content--end ${setActiveHeader(
             "quantity"
           )}`}
           onClick={() => handleSortStatus("quantity", "number")}
@@ -82,7 +86,7 @@ const TableHeader = ({ initialItems }) => {
           <p>AMOUNT</p>
         </th>
         <th
-          className={`grid-column_two table-header_num ${setActiveHeader(
+          className={`grid-column_two flex__align-items--center flex__justify-content--end ${setActiveHeader(
             "price"
           )}`}
           onClick={() => handleSortStatus("price", "number")}
@@ -95,7 +99,9 @@ const TableHeader = ({ initialItems }) => {
           <p>PRICE/UNIT</p>
         </th>
         <th
-          className={`grid-column_two ${setActiveHeader("user")}`}
+          className={`grid-column_two flex__align-items--center ${setActiveHeader(
+            "user"
+          )}`}
           onClick={() => handleSortStatus("user", "string")}
         >
           <SortIcons
