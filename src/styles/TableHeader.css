@@ -24,6 +24,7 @@ th {
   gap: 0.5em;
   font-weight: 300;
   cursor: pointer;
+  border: solid blue 1px;
 }
 
 th:hover {

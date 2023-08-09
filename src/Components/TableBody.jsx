@@ -18,17 +18,23 @@ const TableBody = ({ currentPage, itemsPerPage }) => {
     <tbody>
       {setCurrentItems().map(
         ({ id, countedAt, product, quantity, price, user }, index) => (
-          <tr key={index} className='twelve-grid-columns table-row'>
-            <td className='grid-column_two table-row_date'>
+          <tr key={index} className='twelve-grid-columns table-data'>
+            <td className='grid-column_two grid__align-items--center table-data__date'>
               {formatDate(countedAt)}
             </td>
-            <td className='grid-column_one table-row_num'>{formatId(id)}</td>
-            <td className='grid-column_four table-row_product'>{product}</td>
-            <td className='grid-column_one table-row_num'>{quantity}</td>
-            <td className='grid-column_two table-row_num'>
+            <td className='grid-column_one grid__align-items--center table-data__num'>
+              {formatId(id)}
+            </td>
+            <td className='grid-column_four grid__align-items--center table-data__product'>
+              {product}
+            </td>
+            <td className='grid-column_one  grid__align-items--center table-data__num'>
+              {quantity}
+            </td>
+            <td className='grid-column_two grid__align-items--center table-data__num'>
               {formatPrice(price)}
             </td>
-            <td className='grid-column_two table-row_user'>
+            <td className='grid-column_two grid__align-items--center table-data__user'>
               <a href='http://localhost:3000/'>{user}</a>
             </td>
           </tr>

@@ -10,7 +10,7 @@ html {
 .twelve-grid-columns {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: var(--space-m);
+  grid-column-gap: var(--space-s);
 }
 
 .two-grid-column__extend-one {
