@@ -1,6 +1,12 @@
 import "../styles/PageButtons.css";
 
-const PageButtons = ({ items, currentPage, setCurrentPage, itemsPerPage }) => {
+const PageButtons = ({
+  items,
+  currentPage,
+  setCurrentPage,
+  itemsPerPage,
+  scrollToTop,
+}) => {
   const totalPages = Math.ceil(items.length / itemsPerPage);
   const handlePage = (direction) => {
     if (direction === "back" && currentPage > 1) {
@@ -9,6 +15,7 @@ const PageButtons = ({ items, currentPage, setCurrentPage, itemsPerPage }) => {
     if (direction === "next" && totalPages > currentPage) {
       setCurrentPage(currentPage + 1);
     }
+    scrollToTop();
   };
   return (
     <div className='container__page-btn flex__justify-content--space-around flex__align-items--center'>

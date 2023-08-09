@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import data from "./data.json";
 import Header from "./Components/Header";
 import Filter from "./Components/Filter";
@@ -19,6 +19,10 @@ const App = () => {
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const [openFilter, setOpenFilter] = useState(false);
+  const scrollRef = useRef(null);
+  const scrollToTop = () => {
+    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <itemsContext.Provider value={{ items, setItems }}>
@@ -39,6 +43,7 @@ const App = () => {
                 items={items}
                 currentPage={currentPage}
                 itemsPerPage={itemsPerPage}
+                scrollRef={scrollRef}
               />
             </table>
             <PageButtons
@@ -46,6 +51,7 @@ const App = () => {
               itemsPerPage={itemsPerPage}
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
+              scrollToTop={scrollToTop}
             />
           </div>
         </main>

@@ -3,7 +3,7 @@ import { itemsContext } from "../helpers/createContext";
 import { formatDate, formatId, formatPrice } from "../helpers/formatters";
 import "../styles/TableBody.css";
 
-const TableBody = ({ currentPage, itemsPerPage }) => {
+const TableBody = ({ currentPage, itemsPerPage, scrollRef }) => {
   const { items } = useContext(itemsContext);
 
   const setCurrentItems = () => {
@@ -15,7 +15,7 @@ const TableBody = ({ currentPage, itemsPerPage }) => {
   };
 
   return (
-    <tbody>
+    <tbody ref={scrollRef}>
       {setCurrentItems().map(
         ({ id, countedAt, product, quantity, price, user }, index) => (
           <tr key={index} className='twelve-grid-columns table-data'>
