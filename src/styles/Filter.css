@@ -41,6 +41,7 @@
 .icon__close-filter {
   width: var(--size-icon);
   height: var(--size-icon);
+  padding: var(--icon-padding);
   border-radius: 50%;
   cursor: pointer;
 }
