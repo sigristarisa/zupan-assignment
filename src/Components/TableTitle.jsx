@@ -17,13 +17,15 @@ const TableTitle = ({ openFilter, setOpenFilter }) => {
 
   return (
     <div className='container__table-title grid-row__stack'>
-      <div className={`${setContainer()} desktop`}>
+      <div className={`${setContainer()} grid__align-items--center`}>
         <aside className='container__table-title--left'>
           <div>
             <h1>Your Inventory</h1>
           </div>
         </aside>
-        <aside className={`container__table-title--right ${setSubContainer()}`}>
+        <aside
+          className={`container__table-title--right flex__justify-content--end ${setSubContainer()}`}
+        >
           {isDesktop && (
             <div className='container__input-search'>
               <input
@@ -34,7 +36,7 @@ const TableTitle = ({ openFilter, setOpenFilter }) => {
             </div>
           )}
           <div
-            className='container__filter-icon'
+            className='container__filter-icon grid__place-items--center'
             onClick={() => setOpenFilter(!openFilter)}
           >
             <svg

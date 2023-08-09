@@ -3,6 +3,8 @@ html {
   --space-xs: 0.8vw;
   --space-s: 1.5vw;
   --space-m: 4.5vw;
+
+  --icon-padding: 8px;
 }
 
 .twelve-grid-columns {
@@ -38,7 +40,12 @@ html {
   grid-column: auto/span 4;
 }
 
-.grid__place-item--center {
+.grid__align-items--center {
+  display: grid;
+  align-items: center;
+}
+
+.grid__place-items--center {
   display: grid;
   place-items: center;
 }
