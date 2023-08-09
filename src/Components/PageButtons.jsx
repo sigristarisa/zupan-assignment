@@ -11,12 +11,12 @@ const PageButtons = ({ items, currentPage, setCurrentPage, itemsPerPage }) => {
     }
   };
   return (
-    <div className='container__page-btn'>
+    <div className='container__page-btn flex__justify-content--space-around flex__align-items--center'>
       {currentPage === 1 ? (
         <div className='space__btn'></div>
       ) : (
         <button
-          className='container__arrow-icon'
+          className='container__arrow-icon grid__place-items--center'
           onClick={() => handlePage("back")}
         >
           <div className='btn__arrow-back'></div>
@@ -27,7 +27,7 @@ const PageButtons = ({ items, currentPage, setCurrentPage, itemsPerPage }) => {
         <div className='space__btn'></div>
       ) : (
         <button
-          className='container__arrow-icon'
+          className='container__arrow-icon grid__place-items--center'
           onClick={() => handlePage("next")}
         >
           <div className='btn__arrow-next'></div>

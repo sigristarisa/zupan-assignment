@@ -2,7 +2,7 @@
 html {
   --space-xs: 0.8vw;
   --space-s: 1.5vw;
-  --space-m: 4.5vw;
+  --space-m: 2.5vw;
 
   --icon-padding: 8px;
 }
@@ -10,7 +10,7 @@ html {
 .twelve-grid-columns {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: var(--space-s);
+  grid-column-gap: var(--space-m);
 }
 
 .two-grid-column__extend-one {
@@ -64,6 +64,11 @@ html {
 .flex__justify-content--end {
   display: flex;
   justify-content: flex-end;
+}
+
+.flex__justify-content--space-around {
+  display: flex;
+  justify-content: space-around;
 }
 
 .flex__align-items--center {

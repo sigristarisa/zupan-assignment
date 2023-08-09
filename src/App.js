@@ -9,7 +9,7 @@ import TableBody from "./Components/TableBody";
 import PageButtons from "./Components/PageButtons";
 import { itemsContext } from "./helpers/createContext";
 import "./styles/reset.css";
-import "./styles/style.css";
+import "./styles/App.css";
 import "./styles/layout.css";
 import "./styles/responsive.css";
 
@@ -32,7 +32,7 @@ const App = () => {
         <Header />
         <main>
           <TableTitle openFilter={openFilter} setOpenFilter={setOpenFilter} />
-          <div className='container__table'>
+          <div className='container__table grid__place-items--center'>
             <table>
               <TableHeader initialItems={initialItems} />
               <TableBody
@@ -41,13 +41,13 @@ const App = () => {
                 itemsPerPage={itemsPerPage}
               />
             </table>
+            <PageButtons
+              items={items}
+              itemsPerPage={itemsPerPage}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
           </div>
-          <PageButtons
-            items={items}
-            itemsPerPage={itemsPerPage}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-          />
         </main>
       </div>
     </itemsContext.Provider>
