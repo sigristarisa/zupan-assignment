@@ -13,8 +13,10 @@ html {
   --off-black: #1e1e1e;
 
   --size-icon: 24px;
+  --border-radius: 12px;
 
   --font-color: var(--off-black);
+  --label-color: var(--dark-grey);
   --bg-color: var(--off-grey);
   --filter-bg-color: var(--off-grey);
   --border-color: var(--off-black);
@@ -27,6 +29,9 @@ html {
   --slider-track-color: var(--dark-grey);
   --search-color: var(--blue);
   --search-border-color: var(--blue);
+  --btn-color: var(--off-grey);
+  --btn-bg-color: var(--light-blue);
+  --btn-hover-color: var(--blue);
 }
 
 body.dark-mode {

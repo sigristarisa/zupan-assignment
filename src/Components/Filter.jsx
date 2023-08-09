@@ -26,10 +26,10 @@ const Filter = ({ openFilter, setOpenFilter }) => {
         </div>
       </div>
       <div className='main__filter grid__place-items--center'>
-        <section className='container__filter-category'>
+        <section className='container__filter-category flex__column--stack'>
           <h2>Counted At</h2>
           <div className='container__date three-grid-column__extend-middle grid__place-items--center'>
-            <div className='container__date-input'>
+            <div className='container__input flex__column--stack'>
               <label htmlFor='input__min-date'>From</label>
               <input
                 id='input__min-date'
@@ -40,7 +40,7 @@ const Filter = ({ openFilter, setOpenFilter }) => {
               />
             </div>
             <span>–</span>
-            <div className='container__date-input'>
+            <div className='container__input flex__column--stack'>
               <label htmlFor='input__max-date'>To</label>
               <input
                 id='input__max-date'
@@ -52,7 +52,7 @@ const Filter = ({ openFilter, setOpenFilter }) => {
             </div>
           </div>
         </section>
-        <section className='container__filter-category'>
+        <section className='container__filter-category flex__column--stack'>
           <h2>Amount</h2>
           <div className='container__amount-range'>
             <input
@@ -75,12 +75,18 @@ const Filter = ({ openFilter, setOpenFilter }) => {
             />
           </div>
           <div className='container__amount-input three-grid-column__extend-middle grid__place-items--center'>
-            <input type='number' value={amount[0]} />
+            <div className='container__input flex__column--stack'>
+              <label htmlFor='input__min-amount'>Min amount</label>
+              <input id='input__min-amount' type='number' value={amount[0]} />
+            </div>
             <span>–</span>
-            <input type='number' value={amount[1]} />
+            <div className='container__input flex__column--stack'>
+              <label htmlFor='input__max-amount'>Max amount</label>
+              <input id='input__max-amount' type='number' value={amount[1]} />
+            </div>
           </div>
         </section>
-        <section className='container__filter-category'>
+        <section className='container__filter-category flex__column--stack'>
           <h2>Price</h2>
           <div className='container__price-range'>
             <input
@@ -103,13 +109,19 @@ const Filter = ({ openFilter, setOpenFilter }) => {
             />
           </div>
           <div className='container__price-input three-grid-column__extend-middle grid__place-items--center'>
-            <input type='number' value={prices[0]} />
+            <div className='container__input flex__column--stack'>
+              <label htmlFor='input__min-price'>Min price</label>
+              <input id='input__min-price' type='number' value={prices[0]} />
+            </div>
             <span>–</span>
-            <input type='number' value={prices[1]} />
+            <div className='container__input flex__column--stack'>
+              <label htmlFor='input__max-price'>Max price</label>
+              <input id='input__max-price' type='number' value={prices[1]} />
+            </div>
           </div>
         </section>
       </div>
-      <div className='footer__filter'>
+      <div className='footer__filter flex__justify-content--space-between'>
         <button className='btn__clear-all'>Clear All</button>
         <button className='btn__show'>Show</button>
       </div>

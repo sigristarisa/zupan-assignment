@@ -1,6 +1,6 @@
 .container__filter {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,23 +22,25 @@
 
 .container__filter-content {
   width: 60%;
-  height: 70vh;
+  height: 70%;
   background-color: var(--filter-bg-color);
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
 .header__filter {
   width: 100%;
   height: 10%;
-  padding: 12px;
+  padding: var(--space-xs);
 }
 
 .icon__close-filter {
   width: var(--size-icon);
   height: var(--size-icon);
-  position: relative;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -68,7 +70,6 @@
 .title__filter {
   text-align: center;
   padding-right: var(--size-icon);
-  margin: 0;
 }
 
 .container__filter-bg {
@@ -85,16 +86,22 @@
 .main__filter {
   width: 100%;
   height: 80%;
-  padding: 12px;
+  padding: var(--space-xs);
   overflow: scroll;
   border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
 }
 
+.main__filter label {
+  font-size: 0.8em;
+  color: var(--label-color);
+}
+
 .container__filter-category {
   width: 98%;
   height: calc(70vh * 0.8) / 3;
-  padding: 40px 0;
+  padding: var(--space-m) 0;
+  gap: var(--space-m);
   border-bottom: var(--table-border-color) solid 1px;
 }
 
@@ -124,8 +131,8 @@
 
 .input-range__min::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 32px;
-  width: 32px;
+  height: var(--size-icon);
+  width: var(--size-icon);
   border-radius: 50%;
   border: solid 1px var(--slider-track-color);
   background: var(--slider-color);
@@ -160,8 +167,8 @@
 
 .input-range__max::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 32px;
-  width: 32px;
+  height: var(--size-icon);
+  width: var(--size-icon);
   border-radius: 50%;
   border: solid 1px var(--slider-track-color);
   background: var(--slider-color);
@@ -182,27 +189,27 @@
 .container__amount-input,
 .container__price-input {
   height: 10vh;
+
+  gap: var(--space-xs);
 }
 
-.container__date-input input[type="date"],
+.container__date input[type="date"],
 .container__amount-input input[type="number"],
 .container__price-input input[type="number"] {
   width: 20vw;
   height: 6vh;
-  padding: 20px;
+  padding: var(--icon-padding);
   color: var(--font-color);
   background-color: var(--bg-color);
   font-family: "Noto Sans Mono", monospace;
   border: solid 1px var(--slider-track-color);
-  border-radius: 12px;
+  border-radius: var(--border-radius);
 }
 
 .footer__filter {
   width: 100%;
   height: 10%;
-  padding: 12px;
-  display: flex;
-  justify-content: space-between;
+  padding: var(--space-xs);
 }
 
 .btn__clear-all {
@@ -217,8 +224,16 @@
 .btn__show {
   width: 10vw;
   height: 4vh;
-  color: var(--off-grey);
+  color: var(--btn-color);
   border: none;
-  background-color: var(--link-color);
-  border-radius: 8px;
+  background-color: var(--btn-bg-color);
+  border-radius: var(--border-radius);
+}
+
+.btn__show:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.container__input {
+  gap: var(--space-xs);
 }

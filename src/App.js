@@ -24,7 +24,7 @@ const App = () => {
     <itemsContext.Provider value={{ items, setItems }}>
       <div className='App'>
         {openFilter && (
-          <div className='container__filter grid__place-item--center'>
+          <div className='container__filter'>
             <Filter openFilter={openFilter} setOpenFilter={setOpenFilter} />
             <FilterBackground openFilter={openFilter} />
           </div>

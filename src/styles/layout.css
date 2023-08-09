@@ -71,7 +71,17 @@ html {
   justify-content: space-around;
 }
 
+.flex__justify-content--space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .flex__align-items--center {
   display: flex;
   align-items: center;
+}
+
+.flex__column--stack {
+  display: flex;
+  flex-direction: column;
 }
