@@ -1,16 +1,16 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import SortIcons from "./SortIcons";
 import { itemsContext } from "../helpers/createContext";
 import { sortStrings, sortNumbers, sortDates } from "../helpers/sorters";
 import "../styles/TableHeader.css";
 
 const TableHeader = ({ initialItems }) => {
-  const { setItems } = useContext(itemsContext);
+  const { items, setItems } = useContext(itemsContext);
   const sortStatus = ["none", "descendent", "ascendent"];
   const [sortIndex, setSortIndex] = useState(1);
   const [currentSort, setCurrentSort] = useState("default");
 
-  const setSortType = (items, header, direction, dataType) => {
+  const setSortedItems = (items, header, direction, dataType) => {
     if (dataType === "number") return sortNumbers(items, header, direction);
     if (dataType === "string") return sortStrings(items, header, direction);
     if (dataType === "date") return sortDates(items, header, direction);
@@ -26,10 +26,12 @@ const TableHeader = ({ initialItems }) => {
       setCurrentSort(header);
       setSortIndex(1);
     }
+    console.log("header", header, "currentSort", currentSort);
     setItems(
-      setSortType(initialItems, header, sortStatus[sortIndex], dataType)
+      setSortedItems(initialItems, currentSort, sortStatus[sortIndex], dataType)
     );
   };
+
   return (
     <thead>
       <tr className='container__table-header twelve-grid-columns'>

@@ -69,6 +69,7 @@
 }
 
 .title__filter {
+  font-size: 1em;
   text-align: center;
   padding-right: var(--size-icon);
 }
@@ -96,6 +97,10 @@
 .main__filter label {
   font-size: 0.8em;
   color: var(--label-color);
+}
+
+.main__filter span {
+  margin-top: calc(0.8em + var(--space-xs));
 }
 
 .container__filter-category {
