@@ -1,11 +1,11 @@
 <h1 align="center">Zupan Take Home Challenge - Web UI</h1>
 
 ## How to Run /Set Up App Locally
-(1) Clone the project repository to your local machine
-(2) In the project root directory, run ``npm install`` to install dependencies
-(3) In the project directory, run ``npm start`` to run the app
-(4) Open ``http://localhost:3000`` to view it in your browser
-You can also access from the deployed version from this [link]()
+1. Clone the project repository to your local machine
+2. In the project root directory, run ``npm install`` to install dependencies
+3. In the project directory, run ``npm start`` to run the app
+4. Open ``http://localhost:3000`` to view it in your browser
+You can also access from the deployed version from this [link](zupan-assignment.vercel.app)
 
 ## Requirements
 - Responsive design (mobile should have a system to show less data in order to make it less noisy)</br>
