@@ -1,4 +1,4 @@
-# Zupan Take Home Challenge - Web UI
+<h1 align="center">Zupan Take Home Challenge - Web UI</h1>
 
 ## Requirements
 - Responsive design (mobile should have a system to show less data in order to make it less noisy)</br>
@@ -15,8 +15,9 @@
 
 ## App Structure
 ### Language & Framework 
-- React.js => This allows to also showcase HTML skills
+- React.js (This allows to showcase HTML skills as well)
 - CSS
+  
 ### Files
 - ``src/Components``: Components that constructs the app
 - ``src/styles``: CSS files that adds styling to the app</br>
@@ -25,4 +26,19 @@
  &nbsp;&nbsp;&nbsp;&nbsp;- ```responsive.css```: Styling related to responseiveness</br>
  &nbsp;&nbsp;&nbsp;&nbsp;- remaining css files: Related to each Components with the same naming</br>
 
-By separating CSS files allows to be organized 
+## Design
+### Overview
+Assuming the table is used to have a glance of data (id, user name, "counted at" date, quantity, price, product), it is necessary to have a clean, simple interface. This allows to minimize needless noises and distraction.</br>
+Taking the inspiration from Zupan's logo, icons and design has roundness and curves to make the brand more cohesive.
+
+### Color
+To keep Zupan's brand, the majority of colors in this app are extracted from [Zupan's website](https://zupan.ai/). Several colors as well as colors for dark mode are modified from the extracted colors. 
+
+### Fonts
+Fonts are chosen from [Google Fonts](https://fonts.google.com/) – my knowledge about fonts are very minimal, so I've selected fonts that are a recommended pairing through my research.</br>
+Numbers are delibrately with monospace fonts, which has equal spacing between characters. This keeps the length of the numbers even when listed in a table, eliminating crooked alignment. 
+
+
+
+
+
