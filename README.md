@@ -39,6 +39,35 @@ Fonts are chosen from [Google Fonts](https://fonts.google.com/) – my knowledge
 Numbers are delibrately with monospace fonts, which has equal spacing between characters. This keeps the length of the numbers even when listed in a table, eliminating crooked alignment. 
 
 
+## Requirement Rundown
+### Responsive design
+<h4>Desktop / Big Screen</h4>
+The table and its data are able to see in one glance.</br>
+
+<h4>Tablet / Mobile</h4>
+The table's length expands and able to scroll horizontally. The right side of the table has a blurr effect to indicate that there are more contents to be shown.</br> 
+The search bar also shifts under the title to minimize the crowdness in the header.
 
 
+### Dark / Light Design
+The "Light/Dark" switch button is located on the top right corner. Once clicked, the entire interface toggles gradually to its respected mode.
 
+### Format Data
+To format the given data (dates, numbers, currency) to human-readable, functions are created accordingly. These functions are found in ``src/helpers/formatters.js``.
+
+### Pagination
+Once scrolled down to the bottom of the table, users can click to move back/next to change pages. The current page number is also visible.
+
+### Sorting
+When hovering each header, the font weight changes to bold to indicate that these elements are clickable. Once clicked, the font weight remains bold and switch to italic, showing which current header is active.</br>
+Each header has its own "sorting icons" – "ascendant" when top icon is active, and "descendant" when bottom icon is active. These icons might not point out directly what they are, but in order to maintain the clean, simple interface, I went for this design assuming users would learn quickly enough.</br>
+Header states rotate in the order of: "descendant" => "ascendant" => "none" .
+
+### Filter
+To keep the interface organized, the filter system has its own window by clicking the filter icon located on the right. Date, amount and price are able to filter, with dates input and amount/price inputs and slider.</br>
+Although string input is required in the filter, this would be more suitable as a search bar since users will be searching for specific keywords. The search bar is next to the filter button for faster access. 
+
+
+## Improvement
+- User research is heavily needed to implement what the users need. This step can determine how the order of the table data should be, how the interface/layout should be etc. The design I came up is all among assumption what the users "might" want to have, hence this design might not be the best solution.
+- It will be more user-friendly when the blurr effect for smaller screen would clear out once the user reach to the end of the table.
