@@ -108,6 +108,7 @@
   height: calc(70vh * 0.8) / 3;
   padding: var(--space-m) 0;
   gap: var(--space-m);
+  font-size: 0.8em;
   border-bottom: var(--table-border-color) solid 1px;
 }
 
@@ -219,7 +220,7 @@
 }
 
 .btn__clear-all {
-  width: 10vw;
+  width: 15vw;
   color: var(--font-color);
   background-color: transparent;
   border: none;
@@ -228,7 +229,7 @@
 }
 
 .btn__show {
-  width: 10vw;
+  width: 15vw;
   height: 4vh;
   color: var(--btn-color);
   border: none;
