@@ -21,6 +21,8 @@ You can also access from the deployed version from this [link](zupan-assignment.
 &nbsp;&nbsp;&nbsp;&nbsp;- Date, two input date pickers that show the beginning and end of the period</br>
 
 ## Demo
+https://github.com/sigristarisa/zupan-assignment/assets/90552887/455615ad-8c8f-409a-b629-0f17f4c380a6
+
 
 
 ## App Structure
@@ -82,3 +84,4 @@ Although string input is required in the filter, this would be more suitable as 
 - User research is heavily needed to implement what the users need. This step can determine how the order of the table data should be, how the interface/layout should be etc. The design I came up is all among assumption what the users "might" want to have, hence this design might not be the best solution.
 - It will be more user-friendly when the blurr effect for smaller screen would clear out once the user reach to the end of the table.
 - Styling for the sliders in filter can definitely be improved – having two thumbs in one slider required extra logic & styling that I couldn't acheive. Using Component UI would be faster with cleaner outcome.
+- The HTML can be organized better by utilizing React.js component structures – several parts looks bloated.
