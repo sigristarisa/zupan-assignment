@@ -1,12 +1,5 @@
 <h1 align="center">Zupan Take Home Challenge - Web UI</h1>
 
-## How to Run /Set Up App Locally
-1. Clone the project repository to your local machine
-2. In the project root directory, run ``npm install`` to install dependencies
-3. In the project directory, run ``npm start`` to run the app
-4. Open ``http://localhost:3000`` to view it in your browser</br>
-You can also access from the deployed version from this [link](https://zupan-assignment.vercel.app/)
-
 ## Requirements
 - Responsive design (mobile should have a system to show less data in order to make it less noisy)</br>
 - Dark/light design</br>
@@ -19,6 +12,14 @@ You can also access from the deployed version from this [link](https://zupan-ass
 &nbsp;&nbsp;&nbsp;&nbsp;- String, input text</br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Number, two number input text with min and max</br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Date, two input date pickers that show the beginning and end of the period</br>
+
+## How to Run /Set Up App Locally
+1. Clone the project repository to your local machine
+2. In the project root directory, run ``npm install`` to install dependencies
+3. In the project directory, run ``npm start`` to run the app
+4. Open ``http://localhost:3000`` to view it in your browser</br>
+You can also access from the deployed version from this [link](https://zupan-assignment.vercel.app/)
+
 
 ## Demo
 https://github.com/sigristarisa/zupan-assignment/assets/90552887/455615ad-8c8f-409a-b629-0f17f4c380a6
