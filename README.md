@@ -20,6 +20,9 @@ You can also access from the deployed version from this [link](zupan-assignment.
 &nbsp;&nbsp;&nbsp;&nbsp;- Number, two number input text with min and max</br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Date, two input date pickers that show the beginning and end of the period</br>
 
+## Demo
+
+
 ## App Structure
 ### Language & Framework 
 - React.js (This allows to showcase HTML skills as well)
