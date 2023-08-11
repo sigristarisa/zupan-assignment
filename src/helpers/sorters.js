@@ -2,6 +2,7 @@ export const sortStrings = (items, header, direction) => {
   if (direction === "none") return items;
   if (direction === "descendent")
     return items.sort((a, b) => a[header].localeCompare(b[header]));
+
   if (direction === "ascendent")
     return items.sort((a, b) => b[header].localeCompare(a[header]));
 };

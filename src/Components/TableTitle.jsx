@@ -5,11 +5,17 @@ const TableTitle = ({ openFilter, setOpenFilter }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
   const updateScreenSize = () => setIsDesktop(window.innerWidth > 768);
 
-  const setContainer = () =>
-    isDesktop ? `two-grid-column__extend-two` : `two-grid-column__extend-one`;
-
-  const setSubContainer = () =>
-    isDesktop ? "two-grid-column__extend-one" : "";
+  const setDesktopLayout = () => {
+    let containerObj = {
+      main: "two-grid-column__extend-two",
+      sub: "two-grid-column__extend-one",
+    };
+    if (!isDesktop) {
+      containerObj.main = "two-grid-column__extend-one";
+      containerObj.sub = "";
+    }
+    return containerObj;
+  };
 
   useEffect(() => {
     window.addEventListener("resize", updateScreenSize);
@@ -17,14 +23,16 @@ const TableTitle = ({ openFilter, setOpenFilter }) => {
 
   return (
     <div className='container__table-title grid-row__stack'>
-      <div className={`${setContainer()} grid__align-items--center`}>
+      <div className={`${setDesktopLayout().main} grid__align-items--center`}>
         <aside className='container__table-title--left'>
           <div>
             <h1>Your Inventory</h1>
           </div>
         </aside>
         <aside
-          className={`container__table-title--right flex__justify-content--end ${setSubContainer()}`}
+          className={`container__table-title--right flex__justify-content--end ${
+            setDesktopLayout().sub
+          }`}
         >
           {isDesktop && (
             <div className='container__input-search'>

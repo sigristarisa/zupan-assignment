@@ -7,7 +7,6 @@ import TableTitle from "./Components/TableTitle";
 import TableHeader from "./Components/TableHeader";
 import TableBody from "./Components/TableBody";
 import PageButtons from "./Components/PageButtons";
-import { itemsContext } from "./helpers/createContext";
 import "./styles/reset.css";
 import "./styles/App.css";
 import "./styles/layout.css";
@@ -25,38 +24,36 @@ const App = () => {
   };
 
   return (
-    <itemsContext.Provider value={{ items, setItems }}>
-      <div className='App'>
-        {openFilter && (
-          <div className='container__filter'>
-            <Filter openFilter={openFilter} setOpenFilter={setOpenFilter} />
-            <FilterBackground openFilter={openFilter} />
-          </div>
-        )}
-        <Header />
-        <main>
-          <TableTitle openFilter={openFilter} setOpenFilter={setOpenFilter} />
-          <div className='container__table grid__place-items--center'>
-            <table>
-              <TableHeader initialItems={initialItems} />
-              <TableBody
-                items={items}
-                currentPage={currentPage}
-                itemsPerPage={itemsPerPage}
-                scrollRef={scrollRef}
-              />
-            </table>
-            <PageButtons
+    <div className='App'>
+      {openFilter && (
+        <div className='container__filter'>
+          <Filter openFilter={openFilter} setOpenFilter={setOpenFilter} />
+          <FilterBackground openFilter={openFilter} />
+        </div>
+      )}
+      <Header />
+      <main>
+        <TableTitle openFilter={openFilter} setOpenFilter={setOpenFilter} />
+        <div className='container__table grid__place-items--center'>
+          <table>
+            <TableHeader initialItems={initialItems} setItems={setItems} />
+            <TableBody
               items={items}
-              itemsPerPage={itemsPerPage}
               currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-              scrollToTop={scrollToTop}
+              itemsPerPage={itemsPerPage}
+              scrollRef={scrollRef}
             />
-          </div>
-        </main>
-      </div>
-    </itemsContext.Provider>
+          </table>
+          <PageButtons
+            items={items}
+            itemsPerPage={itemsPerPage}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            scrollToTop={scrollToTop}
+          />
+        </div>
+      </main>
+    </div>
   );
 };
 

@@ -1,11 +1,10 @@
-import { useState, useContext, useEffect } from "react";
+import { useState } from "react";
 import SortIcons from "./SortIcons";
-import { itemsContext } from "../helpers/createContext";
 import { sortStrings, sortNumbers, sortDates } from "../helpers/sorters";
 import "../styles/TableHeader.css";
 
-const TableHeader = ({ initialItems }) => {
-  const { items, setItems } = useContext(itemsContext);
+const TableHeader = ({ initialItems, setItems }) => {
+  // FUNCTIONALITY FOR SORTING IS NOT WORKING AT THE MOMENT //
   const sortStatus = ["none", "descendent", "ascendent"];
   const [sortIndex, setSortIndex] = useState(1);
   const [currentSort, setCurrentSort] = useState("default");
@@ -26,7 +25,6 @@ const TableHeader = ({ initialItems }) => {
       setCurrentSort(header);
       setSortIndex(1);
     }
-    console.log("header", header, "currentSort", currentSort);
     setItems(
       setSortedItems(initialItems, currentSort, sortStatus[sortIndex], dataType)
     );

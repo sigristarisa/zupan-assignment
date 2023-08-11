@@ -1,16 +1,11 @@
-import { useEffect, useContext } from "react";
-import { itemsContext } from "../helpers/createContext";
 import { formatDate, formatId, formatPrice } from "../helpers/formatters";
 import "../styles/TableBody.css";
 
-const TableBody = ({ currentPage, itemsPerPage, scrollRef }) => {
-  const { items } = useContext(itemsContext);
-
+const TableBody = ({ items, currentPage, itemsPerPage, scrollRef }) => {
   const setCurrentItems = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
-
     return currentItems;
   };
 

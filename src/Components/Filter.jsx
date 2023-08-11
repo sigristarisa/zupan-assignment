@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/Filter.css";
 
 const Filter = ({ openFilter, setOpenFilter }) => {
+  // FUNCTIONALITY FOR FILTERING IS NOT WORKING AT THE MOMENT //
   const [prices, setPrices] = useState([23, 5000]);
   const [amount, setAmount] = useState([2, 300]);
   const [dates, setDates] = useState(["ddd", "fff"]);
@@ -11,7 +12,6 @@ const Filter = ({ openFilter, setOpenFilter }) => {
     if (name === "min-price") prices[0] = Number(value);
     if (name === "max-price") prices[1] = Number(value);
     setPrices(prices);
-    console.log(prices);
   };
 
   return (
@@ -123,7 +123,12 @@ const Filter = ({ openFilter, setOpenFilter }) => {
       </div>
       <div className='footer__filter flex__justify-content--space-between'>
         <button className='btn__clear-all'>Clear All</button>
-        <button className='btn__show'>Show</button>
+        <button
+          className='btn__show'
+          onClick={() => setOpenFilter(!openFilter)}
+        >
+          Show
+        </button>
       </div>
     </div>
   );
