@@ -27,6 +27,7 @@ html {
   --icon-hover-bg-color: var(--light-blue);
   --slider-color: var(--off-grey);
   --slider-track-color: var(--dark-grey);
+  --search-font-color: var(--black);
   --search-color: var(--blue);
   --search-border-color: var(--blue);
   --btn-color: var(--off-grey);
@@ -45,6 +46,7 @@ body.dark-mode {
   --link-color: var(--light-blue);
   --icon-color: var(--off-grey);
   --icon-hover-color: (--off-grey);
+  --search-font-color: var(--off-grey);
   --search-color: var(--off-grey);
   --search-border-color: var(--off-grey);
 }

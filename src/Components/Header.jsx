@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Header.css";
 
 const Header = () => {
   const [darkActive, setDarkActive] = useState(false);
-
-  const handleMode = () => setDarkActive(!darkActive);
 
   darkActive
     ? document.body.setAttribute("class", "dark-mode")
@@ -14,15 +12,15 @@ const Header = () => {
     <header className='flex__justify-content--end'>
       <div className='container__mode'>
         <span
-          className={!darkActive && "screen-mode--active"}
-          onClick={() => handleMode()}
+          className={!darkActive ? "screen-mode--active" : ""}
+          onClick={() => setDarkActive(!darkActive)}
         >
           Light{" "}
         </span>
         <span>/</span>
         <span
-          className={darkActive && "screen-mode--active"}
-          onClick={() => handleMode()}
+          className={darkActive ? "screen-mode--active" : ""}
+          onClick={() => setDarkActive(!darkActive)}
         >
           {" "}
           Dark

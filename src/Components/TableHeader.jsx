@@ -26,7 +26,7 @@ const TableHeader = ({ initialItems, setItems }) => {
       setSortIndex(1);
     }
     setItems(
-      setSortedItems(initialItems, currentSort, sortStatus[sortIndex], dataType)
+      setSortedItems(initialItems, header, sortStatus[sortIndex], dataType)
     );
   };
 
